@@ -60,7 +60,7 @@ const Footer = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://www.dropbox.com/home/Documents?preview=Resume_Anirban_Tasfin_Azad.pdf"
+                  "https://www.dropbox.com/scl/fi/mo95bg3ecu3g90scei2rf/Resume_Anirban_Tasfin_Azad.pdf?rlkey=i43ihe8n5g6lbjsatm82rszry&st=n8hw4ykj&dl=0"
                 )
               }
             >
