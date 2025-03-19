@@ -55,7 +55,14 @@ const Footer = () => {
                   : 'text-monochrome90'
               }`}
           >
-            <button onClick={() => window.scrollTo(0, 0)}>Back to top</button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              Back to top
+            </button>
             <Link href={"/"}>Writeups</Link>
             <button
               onClick={() =>

@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import LenisScroll from "@/components/LenisScroll";
+import CustomCursor from "@/components/ui/customCursor";
 import localFont from "next/font/local";
 
 export const plusJakartaSans = Plus_Jakarta_Sans({
@@ -29,9 +31,12 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.variable} ${generalSans.variable} antialiased bg-background`}
       >
-        <NavBar />
-        {children}
-        <Footer />
+        <LenisScroll>
+          <NavBar />
+          <div id="lenis-root">{children}</div>
+          <CustomCursor />
+          <Footer />
+        </LenisScroll>
       </body>
     </html>
   );

@@ -54,6 +54,7 @@ const RecentWork = () => {
           <div className="flex items-center justify-between gap-10 w-full">
             {works.map((work) => (
               <div
+                data-hover-text="See Project"
                 key={work.name}
                 className="flex flex-col items-center justify-start gap-6 max-w-[50%] hover:cursor-pointer w-full"
                 onClick={() => onWorkClick(work.pageUrl)}
@@ -85,6 +86,7 @@ const RecentWork = () => {
           {/* Button */}
           <Button
             onClick={() => onViewMore()}
+            variant={"default"}
             className=" w-fit h-14 px-9 py-4 text-lg font-semibold font-plusJakartaSans bg-monochrome110 border-monochrome00 border-2 rounded-none hover:bg-monochrome00 hover:text-monochrome90 "
           >
             VIEW MORE
