@@ -1,80 +1,59 @@
 "use client";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
-const CustomCursor = () => {
-  const pathname = usePathname();
+interface CustomCursorProps {
+  hoverText: string; // Define hoverText as a string
+}
+
+const CustomCursor: React.FC<CustomCursorProps> = ({ hoverText }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [hoverText, setHoverText] = useState("");
   const [visible, setVisible] = useState(false);
-  let hideTimeout: NodeJS.Timeout | null = null;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      // Update the cursor's position
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = (e: Event) => {
-      const target = e.target as HTMLElement | null;
-      if (target && target.hasAttribute("data-hover-text")) {
-        setHoverText(target.getAttribute("data-hover-text") || "");
-        setIsHovered(true);
-        if (hideTimeout) clearTimeout(hideTimeout); // Prevent hiding
-        setTimeout(() => setVisible(true), 10);
-      }
+    const handleMouseEnter = () => {
+      setVisible(true);
     };
 
-    const handleMouseLeave = (e: Event) => {
-      // Add a small delay before hiding to prevent flickering
-      hideTimeout = setTimeout(() => {
-        setVisible(false);
-        setTimeout(() => {
-          setIsHovered(false);
-          setHoverText("");
-        }, 200);
-      }, 10); // Tiny delay to catch fast movements
-    };
-
-    const handleClick = () => {
+    const handleMouseLeave = () => {
       setVisible(false);
-      setTimeout(() => {
-        setIsHovered(false);
-      }, 50);
     };
 
+    // Check hover state dynamically based on mouse position
+    const handleHoverState = () => {
+      const hoveredElement = document.querySelector("[data-hover]:hover");
+      setIsHovered(!!hoveredElement);
+    };
+
+    // Add event listeners for mouse move and hover states
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("mouseenter", handleMouseEnter);
+    document.addEventListener("mouseleave", handleMouseLeave);
 
-    const attachHoverListeners = () => {
-      const hoverableElements = document.querySelectorAll("[data-hover-text]");
-      hoverableElements.forEach((element) => {
-        element.addEventListener("mouseenter", handleMouseEnter);
-        element.addEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-
-    attachHoverListeners();
+    // Check hover state regularly
+    const intervalId = setInterval(handleHoverState, 50);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mousedown", handleClick);
-      const hoverableElements = document.querySelectorAll("[data-hover-text]");
-      hoverableElements.forEach((element) => {
-        element.removeEventListener("mouseenter", handleMouseEnter);
-        element.removeEventListener("mouseleave", handleMouseLeave);
-      });
+      document.removeEventListener("mouseenter", handleMouseEnter);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      clearInterval(intervalId); // Clean up the interval
     };
-  }, [pathname]);
+  }, []);
 
   return (
     <div
-      className={`fixed pointer-events-none z-[1000] transition-opacity duration-200 ease-out ${
-        visible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+      className={`fixed pointer-events-none z-[1000] transition-opacity duration-200 ease-out transform ${
+        visible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-1"
       }`}
       style={{
         top: position.y,
-        left: position.x + 24, // 1rem (16px) gap from cursor
+        left: position.x + 24, // Keeps 1.5rem gap from cursor
       }}
     >
       {isHovered && (

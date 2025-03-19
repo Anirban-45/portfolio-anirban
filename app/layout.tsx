@@ -34,7 +34,7 @@ export default function RootLayout({
         <LenisScroll>
           <NavBar />
           <div id="lenis-root">{children}</div>
-          <CustomCursor />
+          <CustomCursor hoverText="See Project" />
           <Footer />
         </LenisScroll>
       </body>

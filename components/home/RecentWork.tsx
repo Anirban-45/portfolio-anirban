@@ -54,7 +54,7 @@ const RecentWork = () => {
           <div className="flex items-center justify-between gap-10 w-full">
             {works.map((work) => (
               <div
-                data-hover-text="See Project"
+                data-hover
                 key={work.name}
                 className="flex flex-col items-center justify-start gap-6 max-w-[50%] hover:cursor-pointer w-full"
                 onClick={() => onWorkClick(work.pageUrl)}
