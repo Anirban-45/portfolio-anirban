@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { LucideSquareArrowOutUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import NavLink from "./NavLink";
+import CtaButton from "./ui/ctaButton";
 
 const NavBar = () => {
   const [isSidebarActive] = useState(false);
@@ -75,13 +76,11 @@ const NavBar = () => {
               <LucideSquareArrowOutUpRight width={20} height={20} />
             </Button>
           </div>
-          <Button
-            variant={"common"}
-            className="xl:flex xl:items-center hidden text-base font-semibold h-10 px-7 font-plusJakartaSans"
+          <CtaButton
             onClick={() => router.push("/contact")}
           >
             Let's Connect
-          </Button>
+          </CtaButton>
         </div>
       </nav>
     </header>

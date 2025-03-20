@@ -147,3 +147,12 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+@keyframes dotPropagate {
+  0% {
+    background-position: bottom left, bottom right; /* Start from initial positions */
+  }
+  100% {
+    background-position: bottom right, top right; /* End positions (infinite loop) */
+  }
+}
