@@ -79,7 +79,7 @@ const NavBar = () => {
           <CtaButton
             onClick={() => router.push("/contact")}
           >
-            Let's Connect
+            Let's Connect!
           </CtaButton>
         </div>
       </nav>

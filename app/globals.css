@@ -1,3 +1,4 @@
+@import "spinkit/spinkit.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -148,6 +149,15 @@ html.lenis body {
   pointer-events: none;
 }
 
+@keyframes pulseEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+.cta-button {
+  animation: pulseEffect 3s infinite;
+}
+
 @keyframes dotPropagate {
   0% {
     background-position: bottom left, bottom right; /* Start from initial positions */
@@ -155,4 +165,24 @@ html.lenis body {
   100% {
     background-position: bottom right, top right; /* End positions (infinite loop) */
   }
+}
+
+
+@keyframes dotPropagateFast {
+  0% {
+    background-position: bottom left, bottom right;
+  }
+  100% {
+    background-position: bottom right, top right;
+  }
+}
+
+/* Default animation */
+.animate-dots {
+  animation: dotPropagate 3s linear infinite;
+}
+
+/* Faster animation on hover */
+.group:hover .animate-dots {
+  animation: dotPropagateFast 2s linear infinite;
 }
