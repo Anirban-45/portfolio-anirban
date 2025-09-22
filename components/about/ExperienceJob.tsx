@@ -3,11 +3,20 @@ import React from "react";
 
 const jobExp = [
   {
+    name: "Streams Tech LTD.",
+    currentDesignation: "UI/UX Engineer L2",
+    joinedAs: "",
+    startDate: "Apr 2025",
+    endDate: "Aug 2025",
+    workedOn:
+      "Designed an application to manage apartment committees. Worked with Developers on a Satellite based agricultural application to monitor and ﬁnance farmlands",
+  },
+  {
     name: "Softeko",
     currentDesignation: "Senior UI/UX Designer",
     joinedAs: "",
     startDate: "Sept 2024",
-    endDate: "Present",
+    endDate: "Jan 2025",
     workedOn:
       "Built an invoice generator web app now used by 1,000+ monthly, making invoicing simpler for small businesses.",
   },

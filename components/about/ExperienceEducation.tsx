@@ -1,8 +1,11 @@
 import React from 'react'
 
-
-
 const education = [
+  {
+    school: 'Tallinn University',
+    degree: 'MSc. in Human Computer Interaction',
+    session: '2025 - Present',
+  },
   {
     school: 'Islamic university of Technology',
     degree: 'BSC. in Software Engineering',
@@ -13,11 +16,11 @@ const education = [
     degree: 'HSC, science',
     session: '2015 - 2017',
   },
-  {
-    school: 'Ideal School and College, Dhaka',
-    degree: 'SSC, science',
-    session: 'upto 2015',
-  },
+  // {
+  //   school: 'Ideal School and College, Dhaka',
+  //   degree: 'SSC, science',
+  //   session: 'upto 2015',
+  // },
 ]
 const ExperienceEducation = () => {
   return (

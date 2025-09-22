@@ -5,14 +5,14 @@ import React from "react";
 
 const data = [
   {
-    url: "/softeko.png",
-    name: "Softeko.co",
-    designation: "Senior UX/UI Designer",
+    url: "/STL logo.png",
+    name: "Streams Tech LTD.",
+    designation: "UX/UI Engineer L2",
   },
   {
-    url: "/IUT.png",
-    name: "IUT",
-    designation: "BSc. in Software Engineering",
+    url: "/TLU.jpeg",
+    name: "Tallinn University",
+    designation: "Masters in HCI",
   },
 ];
 const Intro = () => {
