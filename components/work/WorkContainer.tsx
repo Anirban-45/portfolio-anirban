@@ -1,5 +1,6 @@
 import React from "react";
 import WorkCard from "./WorkCard";
+import WorkShotScroller from "./WorkShotScroller"
 
 
 const workData = [
@@ -38,7 +39,7 @@ const workData = [
   {
     workTitle: "Beditor",
     workHead: "A Customizable Software For Casual and Creative Writing",
-    clientName: "Safewheel LTD.",
+    clientName: "Personal project",
     workDesc:
       "A user friendly minimal writing tool That I have worked and designed for casual text documents and literature.",
     projectType: "Desktop Application",
@@ -56,6 +57,7 @@ const workData = [
     href: "/safewheel",
   },
 ];
+
 
 const WorkContainer = () => {
   return (
@@ -82,6 +84,7 @@ const WorkContainer = () => {
           ))}
         </div>
       </div>
+        <WorkShotScroller/>
     </section>
   );
 };

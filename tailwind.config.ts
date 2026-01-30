@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import type { PluginAPI } from "tailwindcss/types/config";
+
 export default {
   darkMode: ["class"],
   content: [
@@ -43,6 +45,14 @@ export default {
             transformOrigin: "center",
           },
         },
+        "marquee-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         mouseMove: {
           "0%": { transform: "translateY(-10%)", transformOrigin: "center" },
           "100%": { transform: "translateY(10%)", transformOrigin: "center" },
@@ -51,6 +61,8 @@ export default {
       animation: {
         scaleFade: "scaleFade 1.5s ease-in-out infinite",
         mouseMove: "mouseMove 1s ease-in-out infinite alternate",
+        "marquee-left": "marquee-left 35s linear infinite",
+        "marquee-right": "marquee-right 35s linear infinite",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -112,5 +124,14 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        ".pause-animation": {
+          "animation-play-state": "paused",
+        },
+      });
+    },
+  ],
 } satisfies Config;

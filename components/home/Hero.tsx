@@ -14,7 +14,7 @@ const Hero = () => {
       <div className=" absolute w-full bottom-0 px-[120px]">
         <div className="container px-[120px] h-28 flex items-center justify-between">
           <p className="text-black font-normal text-base leading-[21.6px]">
-            Dhaka, Bangladesh
+            Tallinn, Estonia
           </p>
           <LucideMouse width={36} height={48} className=" animate-mouseMove" />
           <p className="text-black font-normal text-base leading-[21.6px]">
