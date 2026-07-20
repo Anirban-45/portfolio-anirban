@@ -49,13 +49,13 @@ const Footer = () => {
             </div>
           </div>
           <div
-            className={`flex flex-col items-end font-medium text-xl font-plusJakartaSans gap-6 
+            className={`flex flex-col items-end font-medium text-xl font-plusJakartaSans gap-6
                 defaultPages.includes(pathname)
                   ? 'text-monochrome00'
                   : 'text-monochrome90'
               }`}
           >
-            <button 
+            <button
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -94,13 +94,13 @@ const Footer = () => {
           </Button>
           <Button
             variant={"common"}
-            onClick={() => window.open("tel:+8801926214838")}
+            onClick={() => window.open("tel:+37254619445")}
             className={`text-lg font-semibold flex items-center font-plusJakartaSans h-12 px-7 ${
               defaultPages.includes(pathname)
                 ? "text-monochrome90 border-[2px] border-monochrome90 "
                 : "text-monochrome00 bg-monochrome110 border-[1.5px] border-monochrome00 "
             }`}
-          >{`+880 192 621 4838`}</Button>
+          >{`+372 546 19445`}</Button>
         </div>
         {/* Bottom - Copyright & Socials */}
         <div className="flex items-center justify-between mt-5 font-semibold">
