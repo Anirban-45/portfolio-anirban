@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import LenisScroll from "@/components/LenisScroll";
 import CustomCursor from "@/components/ui/customCursor";
 import localFont from "next/font/local";
+import DeviceOverlay from '@/components/ui/deviceOverlay'
 
 export const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -27,7 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+		<html lang="en">
+			<DeviceOverlay />
       <body
         className={`${plusJakartaSans.variable} ${generalSans.variable} antialiased bg-background`}
       >

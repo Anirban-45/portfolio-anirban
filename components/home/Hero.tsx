@@ -36,11 +36,20 @@ const Hero = () => {
               src="/hero-quadrant.png"
               width={76.5}
               height={68}
-              className="absolute -top-[5%] -left-[20%] -translate-x-1/2 -translate-y-1/2"
+              className="absolute -top-[5%] -left-[20%] -translate-x-1/2 -translate-y-1/2 origin-bottom-right animate-swing"
               alt="hero-quadrant"
             />
           </div>
-          <h1 className=" relative max-w-[700px] font-[550] text-[48px] leading-[60.48px]">
+					<h1 className=" relative max-w-[700px] font-[550] text-[48px] leading-[60.48px]">
+						<button className="absolute border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center gap-3">
+							<Image
+								src="/play-polygon.svg"
+								width={10}
+        				height={18}
+								alt="play-polygon"
+							/>
+							<p className="font-semibold uppercase text-base align-middle">Watch my demo video</p>
+						</button>
             <span className=" font-semibold text-[72px] leading-[90.72px] pb-3">
               Hello, I am Anirban. <br />
             </span>
@@ -53,6 +62,13 @@ const Hero = () => {
               height={67.5}
               alt="hero-whisker-lg"
               className="absolute -bottom-[5%] -left-[4%] -translate-x-1/2 translate-y-1/2"
+            />
+            <Image
+            	src="/hero-whisker-sm.png"
+	            width={36}
+	            height={40.6}
+	            alt="hero-whisker-lg"
+	            className="absolute -top-[54%] left-[42%] -translate-x-1/2 translate-y-1/2"
             />
             <Image
               src="/hero-saturn.png"

@@ -134,11 +134,11 @@ html.lenis body {
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important; 
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain; 
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
@@ -185,4 +185,21 @@ html.lenis body {
 /* Faster animation on hover */
 .group:hover .animate-dots {
   animation: dotPropagateFast 2s linear infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translate(-50%, -50%) rotate(6.5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-6.5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(6.5deg);
+  }
+}
+
+.animate-swing {
+  animation: swing 4s ease-in-out infinite alternate;
+  transform-origin: bottom right;
 }

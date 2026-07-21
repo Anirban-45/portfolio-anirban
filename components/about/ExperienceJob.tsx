@@ -85,9 +85,16 @@ const ExperienceJob = () => {
                 {job.startDate} - {job.endDate}
               </p>
             </div>
-            <p className="font-medium text-[16px] leading-[21.6px] text-[#636363]">
-              {job.workedOn}
-            </p>
+            <ul className="list-disc pl-5 font-medium text-[16px] leading-[21.6px] text-[#636363] space-y-2">
+              {job.workedOn
+                .split(". ")
+                .filter(Boolean)
+                .map((item, i) => (
+                  <li key={i}>
+                    {item.endsWith(".") ? item : `${item}.`}
+                  </li>
+                ))}
+            </ul>
           </div>
         </div>
       ))}

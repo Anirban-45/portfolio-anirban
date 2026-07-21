@@ -7,7 +7,7 @@ import { LucideArrowRight } from 'lucide-react'
 const services = [
   {
     url: '/Lightning.png',
-    title: 'Strategy and Band Research',
+    title: 'Strategy and Brand Research',
     desc: 'Understand the market, define the audience & ideate solutions.',
     buttonText: 'Chat with me',
   },
