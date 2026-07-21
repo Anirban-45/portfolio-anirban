@@ -4,6 +4,17 @@ import WorkShotScroller from "./WorkShotScroller"
 
 
 const workData = [
+	{
+    workTitle: "Paphos Museum Web",
+    workHead:
+      "A Website and Dashboard For maintaining your invoices and inventories",
+    clientName: "Cyprus Dept Antiquities",
+    workDesc:
+      "An interactive digital heritage platform for the Paphos Archaeological Museum that combines immersive virtual exhibitions and historical storytelling with seamless online ticketing and event management.",
+    projectType: "Website/Heritage Platform",
+    workImageURL: "/work-paphosweb.png",
+    href: "/paphos-web",
+  },
   {
     workTitle: "invoicegenerator.biz",
     workHead:
