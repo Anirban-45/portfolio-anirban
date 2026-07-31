@@ -68,7 +68,7 @@ const NavBar = () => {
               className="text-base flex items-center gap-2 p-0 font-plusJakartaSans"
               onClick={() =>
                 window.open(
-                  "https://www.dropbox.com/scl/fi/mo95bg3ecu3g90scei2rf/Resume_Anirban_Tasfin_Azad.pdf?rlkey=i43ihe8n5g6lbjsatm82rszry&st=n8hw4ykj&dl=0"
+                  "https://www.dropbox.com/scl/fi/mo95bg3ecu3g90scei2rf/Resume_Anirban_Tasfin_Azad.pdf?rlkey=i43ihe8n5g6lbjsatm82rszry&st=n8hw4ykj&dl=0", "_blank", "noopener,noreferrer"
                 )
               }
             >
