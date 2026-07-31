@@ -118,88 +118,90 @@ const PaphosWebWorkpage = () => {
           <p>
           	The research for this project started with looking at what artifacts and sites we had in hand. Our first museum tour was handled by Dr. Zinonos from AUB Medeteranno, who explained each and every artifact with utmost care and compassion for the people who constructed them by hand. He even ended the tour with a short walk to the city center which gave us an understanding of the Cypriot life and beliefs.
 						<br />
-						<div
-							className="flex gap-5 mt-4"
-						>
-							<Image
-       					src="/paphosweb/field1.png"
-		            width={110}
-		            height={146}
-		            alt="slide-head"
-		            title="field"
-							/>
-							<Image
-       					src="/paphosweb/field2.png"
-		            width={195}
-		            height={146}
-		            alt="slide-head"
-		            title="field"
-							/>
-							<Image
-       					src="/paphosweb/field3.png"
-		            width={110}
-		            height={146}
-		            alt="slide-head"
-		            title="field"
-							/>
-							<Image
-       					src="/paphosweb/field4.png"
-		            width={110}
-		            height={146}
-		            alt="slide-head"
-		            title="field"
-							/>
-							<Image
-       					src="/paphosweb/field5.png"
-		            width={195}
-		            height={146}
-		            alt="slide-head"
-		            title="field"
-		          />
-            </div>
+          </p>
+					<div
+						className="flex gap-5 mt-4"
+					>
+						<Image
+       				src="/paphosweb/field1.png"
+           		width={110}
+             	height={146}
+              alt="slide-head"
+              title="field"
+            />
+						<Image
+       				src="/paphosweb/field2.png"
+		          width={195}
+		          height={146}
+				      alt="slide-head"
+			      	title="field"
+						/>
+						<Image
+       				src="/paphosweb/field3.png"
+		          width={110}
+		          height={146}
+		          alt="slide-head"
+		          title="field"
+						/>
+						<Image
+       				src="/paphosweb/field4.png"
+		          width={110}
+		          height={146}
+		          alt="slide-head"
+		          title="field"
+						/>
+						<Image
+       				src="/paphosweb/field5.png"
+		          width={195}
+		          height={146}
+		          alt="slide-head"
+		          title="field"
+		        />
+					</div>
+					<p>
             <br />
             	Eventually we visited the museum, the Tomb of Kings, the Paphos castle & Even Limassol to get a proper understanding of how to approach our sites design. Following that was a couple of meetings where we decided what our story would portray and where could we visualize it.
 						<br />
 						<br />
 							At the end of this sessions our teams split up in three sections. Design & development, Research & Audit, and finally Story and content management. I being the head of research had a large role to accumulate all the timeline, fact-check the information from academic papers and distribute them to the latter curators. Whereas the content team (Patrick, Qianwen & Robina) started working on the story and taking photos and 3D scans of objects.
 						<br />
-						<div
-							className="flex justify-between my-6"
-						>
-							<a
-	              href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	              target="_blank"
-	              rel="noopener noreferrer"
-	              className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	            >
-              	Timeline research
-							</a>
-							<a
-	              href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	              target="_blank"
-	              rel="noopener noreferrer"
-	              className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	            >
-	              Website analysis
-							</a>
-							<a
-	              href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	              target="_blank"
-	              rel="noopener noreferrer"
-	              className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	            >
-              Storyline Design
-							</a>
-							<a
-	              href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	              target="_blank"
-	              rel="noopener noreferrer"
-	              className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	            >
-              Meeting Notes
-							</a>
-            </div>
 					</p>
+					<div
+						className="flex justify-between mt-2 mb-6 w-full"
+					>
+						<a
+	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+	            target="_blank"
+	            rel="noopener noreferrer"
+	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+	          >
+              	Timeline research
+						</a>
+						<a
+	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+	            target="_blank"
+	            rel="noopener noreferrer"
+	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+	          >
+	              Website analysis
+						</a>
+						<a
+	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+	            target="_blank"
+	            rel="noopener noreferrer"
+	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+	          >
+              Storyline Design
+						</a>
+						<a
+	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+	            target="_blank"
+	            rel="noopener noreferrer"
+	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+	          >
+              Meeting Notes
+						</a>
+            </div>
 					<h5 className=" text-monochrome110 font-semibold text-lg">
 						Interrim Presentation
 					</h5>
@@ -313,7 +315,7 @@ const PaphosWebWorkpage = () => {
 						<br />
           </p>
         </ProjectPara>
-        <ProjectPara title="Design System">
+        <ProjectPara title="Identity & Branding">
           <p>
             Since the project was government-funded, a significant amount of
             time was spent on background research and processes. After a month

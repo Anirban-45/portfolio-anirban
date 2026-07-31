@@ -53,7 +53,18 @@ export default {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
         },
-        mouseMove: {
+        modalFade: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        modalIn: {
+          "0%": { opacity: "0", transform: "translate3d(0, 12px, 0) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translate3d(0, 0, 0) scale(1)" },
+        },
+        indeterminate: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(360%)" },
+        },        mouseMove: {
           "0%": { transform: "translateY(-10%)", transformOrigin: "center" },
           "100%": { transform: "translateY(10%)", transformOrigin: "center" },
         },
@@ -63,6 +74,10 @@ export default {
         mouseMove: "mouseMove 1s ease-in-out infinite alternate",
         "marquee-left": "marquee-left 35s linear infinite",
         "marquee-right": "marquee-right 35s linear infinite",
+        modalFade: "modalFade 200ms ease-out both",
+        modalIn: "modalIn 260ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        indeterminate: "indeterminate 1.1s ease-in-out infinite",
+
       },
       colors: {
         background: "hsl(var(--background))",

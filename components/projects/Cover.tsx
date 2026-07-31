@@ -8,7 +8,7 @@ type CoverProps = {
 
 const Cover = ({url,alt}: CoverProps) => {
   return (
-    <section className='container'>
+    <section className='container' data-outline-boundary="top">
         <Image src={url} width={1440} height={800} alt={alt}/>
     </section>
   )

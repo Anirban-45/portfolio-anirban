@@ -3,15 +3,13 @@ import Image from "next/image";
 import React from "react";
 // import HeroSVG from "./HeroSVG";
 
-
-
 const Hero = () => {
   return (
     <section className=" w-full h-[92vh] text-monochrome90 bg-hero-pattern bg-cover bg-center relative">
       {/* <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0">
         <HeroSVG />
       </div> */}
-      <div className=" absolute w-full bottom-0 px-[120px]">
+      <div className=" absolute w-full bottom-0 px-[120px] hero-in" style={{ animationDelay: "520ms" }}>
         <div className="container px-[120px] h-28 flex items-center justify-between">
           <p className="text-black font-normal text-base leading-[21.6px]">
             Tallinn, Estonia
@@ -24,13 +22,14 @@ const Hero = () => {
       </div>
       <div className=" container px-[120px] pt-[184px] pb-[253px] h-full">
         <div className="flex h-full items-center justify-center gap-[100px] relative">
-          <div className=" relative">
+          <div className=" relative hero-in" style={{ animationDelay: "120ms" }}>
             <Image
               src="/hero-avatar.png"
               width={160}
               height={160}
               alt="hero-avatar"
               className="py-[31.5px]"
+              priority
             />{" "}
             <Image
               src="/hero-quadrant.png"
@@ -40,7 +39,7 @@ const Hero = () => {
               alt="hero-quadrant"
             />
           </div>
-					<h1 className=" relative max-w-[700px] font-[550] text-[48px] leading-[60.48px]">
+					<h1 className=" relative max-w-[700px] font-[550] text-[48px] leading-[60.48px] hero-in" style={{ animationDelay: "260ms" }}>
 						<button className="absolute border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center gap-3">
 							<Image
 								src="/play-polygon.svg"
