@@ -25,7 +25,7 @@ const ProjectInfo = ({
         <h3 className=" text-2xl font-semibold text-matcha60">
           Project Overview
         </h3>
-        <p className="text-monochrome90 text-lg leading-[1.5]">{overview}</p>
+        <p className="text-monochrome90 text-lg leading-[1.5] whitespace-pre-wrap">{overview}</p>
       </div>
       <aside className="flex flex-[18] flex-col gap-4">
         <h3 className=" text-2xl font-semibold text-matcha60">

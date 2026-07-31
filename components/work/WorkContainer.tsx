@@ -12,7 +12,7 @@ const workData = [
     workDesc:
       "An interactive digital heritage platform for the Paphos Archaeological Museum that combines immersive virtual exhibitions and historical storytelling with seamless online ticketing and event management.",
     projectType: "Website/Heritage Platform",
-    workImageURL: "/work-paphosweb.png",
+    workImageURL: "/work-paphosweb.jpg",
     href: "/paphos-web",
   },
   {

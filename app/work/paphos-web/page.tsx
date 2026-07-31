@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import ProjectHeader from "@/components/projects/ProjectHeader";
 import ProjectInfo from "@/components/projects/ProjectInfo";
 import ProjectPara from "@/components/projects/ProjectPara";
+import TypeFormatter from "@/components/ui/typeFormatter";
 import React from "react";
 
 const pageData = {
-  title: "Paphos Museum Web",
-  shortDesc: "A junction to take care of your needs & Loved ones.",
+  title: "Paphos Museum Website",
+  shortDesc: "A digital heritage museum gallery and ticketing system.",
   overview:
-		"Paphos is one of the oldest human settlements in the Mediterranean. For this Erasmus project, we worked as a diverse team, exploring different approaches to build a digital framework around the rich heritage of Paphos. We were allowed to use the artifacts and several heritage sites to shape how we wanted to present our digital piece. And we came up with an idea to introduce a character from ancient Cyprus, to move through different timelines to talk about how life in Cyprus felt to be lived and evolved over time.Eventually, we figure out that the museum itself is the best container to house the person we are envisioning.and that an interactive website would be the most suitable way to present it.",
+		"Paphos is one of the oldest human settlements in the Mediterranean. For this Erasmus project, we worked as a diverse team, exploring different approaches to build a digital framework around the rich heritage of Paphos. \n\nAnd we came up with an idea to introduce a character from ancient Cyprus, to move through different timelines to talk about how life in Cyprus felt to be lived and evolved over time. Eventually, we figure out that the museum itself is the best container to house the person we are envisioning.",
   role: "UX Designer + Research Lead",
   duration: "1.5 months",
   client: "Cyprus Department of Antiquities (Erasmus+ Mobility) ",
@@ -33,39 +34,43 @@ const PaphosWebWorkpage = () => {
         />
         <ProjectPara title="Problem">
           <p>
-          	The Museum was renovated back in 2020. However as it’s maintained by the Cyprus Dept. of Antiquities, the museum did not have a separate  website for itself. And as the proposed mobility requirement for this project was digitalization of cultural heritage, our team wanted a platform to create a story around Ancient Cypriot life. Which made us understand the necessity of a actually well polished web interface that can host these digital significance. We were also allowed to take photos and 3d scans. And not having a website to properly visualize them was the first hurdle of our team.
+						The Museum was renovated back in 2020. However as it’s maintained
+						by the Cyprus Dept. of Antiquities, the museum did not have a
+						separate  website for itself. And as the proposed mobility requirement
+						for this project was digitalization of cultural heritage, our team
+						wanted a platform to create a story around <TypeFormatter>Ancient
+						Cypriot life</TypeFormatter>. Which made us understand the necessity
+						of a actually well polished web interface that can host these digital
+						significance. We were also allowed to take photos and 3d scans. And
+						not having a website to properly visualize them was the first hurdle
+						of our team.
             <br />
           </p>
-          <div className="pl-[14px] border-l-2 border-[#D8790C]">
-            <h5 className=" text-[#D8790C] font-semibold text-xl">
-              Without a streamlined platform, families are left to navigate
-              unreliable sources, and potential caregivers lack the necessary
-              guidance to build a stable career.
-            </h5>
-          </div>
         </ProjectPara>
         <ProjectPara title="Objective">
           <p>
-            The app was designed with two main user panels—one for care
-            receivers and another for caregivers. While its primary function was
-            to help book caregiving services, it also encouraged users to learn
-            caregiving skills. With Songjog Foundation’s expertise, the platform
-            provided training, certifications, and real job opportunities,
-            making it easier for aspiring caregivers to build a meaningful
-            career.
+						Our objective for this project was to introduce an ancient charachter
+						from Cypruses archaic times to its medieval era. So one single person
+						could move along each timeline to tell its story. We all have seen museums
+						to get an outline of what events took place at that time. But rarely do we
+						think about how people and their lives were, and how it led to the civilizations
+						progress. To do so, we looked into the museum itself which had a very
+						well established architectural design albeit very little digital representation.
+						Which is why we started to make the website as baseline for it's digital
+						presence, to introduce the museum, it's structure, philosophy, and history.
+						Then we focused on access and the three seperate ways people could learn about
+						the museum - through timelines, through the museum itself, and through our story.
             <br />
           </p>
           <h5 className=" text-monochrome110 font-semibold text-lg">
             Requirements
           </h5>
           <p>
-            The app was designed with two main user panels—one for care
-            receivers and another for caregivers. While its primary function was
-            to help book caregiving services, it also encouraged users to learn
-            caregiving skills. With Songjog Foundation’s expertise, the platform
-            provided training, certifications, and real job opportunities,
-            making it easier for aspiring caregivers to build a meaningful
-            career.
+						In terms of requirement for this project there were several ways
+						we were aloud to think about like, Audio visual elements and
+						augmented reality. However, digitalization of a heritage aspect was
+						expected from us. We were allowed to use a preferable medium and any
+						functional tech stack.
             <br />
           </p>
           <Figure
@@ -209,7 +214,7 @@ const PaphosWebWorkpage = () => {
             title="Slides"
           />
           <h5 className=" text-monochrome110 font-semibold text-lg">
-            Key insights
+          User Research
           </h5>
           <p>
             After conducting several rounds of surveys, user interviews, and
@@ -328,11 +333,11 @@ const PaphosWebWorkpage = () => {
             <br />
           </p>
           <Image
-            src="/songjog/color-typography.png"
+            src="/paphosweb/colors.png"
             width={800}
             height={1308}
-            alt="color-typography"
-            title="Color and Typography"
+            alt="colors"
+            title="Colors"
           />
           <p>
             I chose two types of elevations for this project, ensuring a
@@ -345,11 +350,11 @@ const PaphosWebWorkpage = () => {
             <br />
           </p>
           <Image
-            src="/songjog/design-system-2.png"
+            src="/paphosweb/typescales.png"
             width={800}
             height={1308}
-            alt="elevation-spacing"
-            title="Elevation & spacing"
+            alt="typography"
+            title="Typography"
           />
           <br />
           <p>
@@ -573,7 +578,7 @@ const PaphosWebWorkpage = () => {
         >
           Watch Full Prototype
         </Button>
-      </section>Paphos Museum Web
+      </section>
     </main>
   );
 };

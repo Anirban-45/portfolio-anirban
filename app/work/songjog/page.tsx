@@ -54,13 +54,12 @@ const SongjogWorkPage = () => {
         </ProjectPara>
         <ProjectPara title="Objective">
           <p>
-            The app was designed with two main user panels—one for care
-            receivers and another for caregivers. While its primary function was
-            to help book caregiving services, it also encouraged users to learn
-            caregiving skills. With Songjog Foundation’s expertise, the platform
-            provided training, certifications, and real job opportunities,
-            making it easier for aspiring caregivers to build a meaningful
-            career.
+						The Caregiver project was a government funded project and handed to me
+						just after the proposal was accepted. A brief business Idea was shared
+						with us alongside a brand guideline and website. I was supposed to plan
+						and design a mobile application for functionality & the users convenience.
+						As of then, only a concept was available, and most of the features were
+						addressed by the clients themselves.
             <br />
           </p>
           <h5 className=" text-monochrome110 font-semibold text-lg">

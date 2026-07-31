@@ -74,13 +74,14 @@ export default function ContactBody() {
               >
                 Name *
               </Label>
-              <div className=" flex items-center gap-6">
+              <div className=" flex items-start gap-6">
                 <Input
                   type="text"
                   name="firstName"
                   placeholder="First"
                   value={form.firstName}
-                  onChange={handleChange}
+									onChange={handleChange}
+                  helperText="Looks good."
                   className="rounded-none px-4 py-3 h-[46px] focus:border-matcha60"
                   required
                 />
@@ -89,7 +90,8 @@ export default function ContactBody() {
                   name="lastName"
                   placeholder="Last"
                   value={form.lastName}
-                  onChange={handleChange}
+									onChange={handleChange}
+                  helperText="Perfect, Thank you!"
                   className="rounded-none px-4 py-3 h-[46px] focus:border-matcha60"
                   required
                 />
@@ -107,7 +109,8 @@ export default function ContactBody() {
                 name="email"
                 placeholder="Email"
                 value={form.email}
-                onChange={handleChange}
+								onChange={handleChange}
+                helperText="I'll reach out to you soon!"
                 required
                 className=" rounded-none px-4 py-3 h-[46px] focus:border-matcha60"
               />
@@ -124,7 +127,8 @@ export default function ContactBody() {
                 name="message"
                 placeholder="Enter your message"
                 value={form.message}
-                onChange={handleChange}
+								onChange={handleChange}
+								helperText="Thank you for sharing."
                 required
                 className=" rounded-none px-4 py-3 h-[234px] focus:border-matcha60"
               />

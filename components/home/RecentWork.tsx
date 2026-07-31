@@ -8,20 +8,20 @@ import { useRouter } from "next/navigation";
 
 const works = [
   {
-    url: "/work-invoicegen.png",
-    pageUrl: "/work/invoice-generator",
-    name: "invoicegenerator.biz",
-    type: "Website/SaaS",
-    year: "2024",
+    url: "/work-paphosweb.jpg",
+    pageUrl: "/work/paphos-web",
+    name: "Paphos Museum Web",
+    type: "Website",
+    year: "2026",
     description:
-      "invoicegenerator.biz is an Exact Match Domain website catering for multiple purpose of invoices including dashboard for management, shelving & analysis.",
+      "The new look, guide and branding for Paphos Archaelogical Museum. It introduces the museum, provides access to it's collections and tells Cypruses history like never before.",
   },
   {
     url: "/work-songjog.png",
     pageUrl: "/work/songjog",
     name: "Songjog Caregiver",
     type: "App/SaaS",
-    year: "2023",
+    year: "2025",
     description:
       "Songjog Caregiver is a platform that connects care receivers with qualified caregivers, offering features like caregiver selection, booking appointments and, customized care plans.",
   },
