@@ -12,7 +12,7 @@ const Experience = () => {
         {/* Experience */}
         <div className="w-full flex flex-col items-start justify-center gap-12">
           {/* Experience Heading */}
-          <div className=" flex flex-col gap-3">
+          <div className=" flex flex-col gap-3 scroll-in scroll-in-left">
             <div className=" flex items-center justify-start gap-2">
               <div className="max-w-7 w-full h-7 relative">
                 <div className=" w-2 h-2 rounded-full bg-monochrome90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]"></div>

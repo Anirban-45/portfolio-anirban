@@ -31,7 +31,7 @@ const WorkCard = ({
     router.push(`work/${href}`); // Navigate to /dashboard
   };
   return (
-    <div key={key} className="flex items-start justify-center gap-9 text-white">
+    <div key={key} className="flex items-start justify-center gap-9 text-white scroll-in">
       {/* Left Section */}
       <div className="flex flex-col items-start justify-center gap-6 flex-[7]">
         <div className=" flex items-center justify-center gap-6">

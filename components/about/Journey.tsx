@@ -11,10 +11,11 @@ const Journey = () => {
           src="/about-hiking.png"
           width={300}
           height={290}
-          alt="about-hiking"
+					alt="about-hiking"
+					className="scroll-in scroll-in-left"
         />
 
-        <div className="flex flex-col gap-[18px] text-[17px] leading-[26px] trackin-[0]">
+        <div className="flex flex-col gap-[18px] text-[17px] leading-[26px] trackin-[0] scroll-in scroll-d2">
           {/* Title */}
           <h3 className=" font-semibold text-[32px] leading-[40.32px] pb-[2px]">
             What led me here

@@ -47,11 +47,11 @@ const RecentWork = () => {
         </div>
         <div className="flex flex-col items-center gap-16 px-[120px] py-[60px]">
           {/* Title */}
-          <h2 className=" self-start font-semibold text-[64px] leading-[80.6px]">
+          <h2 className=" self-start font-semibold text-[64px] leading-[80.6px] scroll-in scroll-d1">
             My recent works
           </h2>
           {/* Works */}
-          <div className="flex items-center justify-between gap-10 w-full">
+          <div className="flex items-center justify-between gap-10 w-full scroll-in scroll-d2">
             {works.map((work) => (
               <div
                 data-hover

@@ -24,7 +24,7 @@ const education = [
 ]
 const ExperienceEducation = () => {
   return (
-    <div className=" flex flex-col gap-5 items-start justify-center text-monochrome110">
+    <div className=" flex flex-col gap-5 items-start justify-center text-monochrome110 scroll-in">
       <h3 className="text-[#383838] font-semibold text-[32px] leading-[40.32px]">
         Education
       </h3>

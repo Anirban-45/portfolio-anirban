@@ -57,11 +57,11 @@ const dashboardData = [
 const DashboardTab = () => {
   return (
     <Tabs defaultValue="invoices" className="w-full transition-all">
-      <TabsList className="flex flex-wrap w-full p-1 items-center justify-around  h-full border-[1.5px] border-matchaBase rounded-full bg-transparent">
+      <TabsList className="flex flex-wrap w-full p-1 items-center justify-between  h-full border-[1.5px] border-matchaBase rounded-full bg-transparent mb-6">
         {dashboardData.map((data) => (
           <TabsTrigger
             key={data.value}
-            className="px-2.5 py-1 data-[state=active]:bg-matchaBase data-[state=active]:text-white data-[state=active]:rounded-full text-[18px] text-monochrome90 leading-[100%]"
+            className="px-[11.5px] py-1.5 data-[state=active]:bg-matchaBase data-[state=active]:text-white data-[state=active]:rounded-full text-[18px] text-monochrome90 leading-[100%]"
             value={data.value}
           >
             {data.name}

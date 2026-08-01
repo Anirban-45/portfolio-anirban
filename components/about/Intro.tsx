@@ -6,7 +6,7 @@ import React from 'react'
 const Intro = () => {
   return (
     <section className=" container px-[120px] py-[80px] flex items-center justify-between gap-[128px]">
-      <div className=" text-monochrome90 font-normal text-[16px] leading-[24px] flex flex-col items-start justify-center gap-3 max-w-[560px]">
+      <div className=" text-monochrome90 font-normal text-[16px] leading-[24px] flex flex-col items-start justify-center gap-3 max-w-[560px] hero-in">
         <h4 className=" font-medium text-xl leading-[25.2px]">Hi there!</h4>
         <h3 className=" font-semibold text-[28px] leading-[35.28px]">
           My name is Anirban Tasfin Azad.
@@ -34,7 +34,7 @@ const Intro = () => {
           explore these ideas and grow.
         </p>
       </div>
-      <div>
+      <div className="hero-in">
         <Image
           src="/pookie.png"
           width={512}

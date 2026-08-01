@@ -60,15 +60,15 @@ export default function ContactBody() {
 
   return (
     <section className="w-full bg-monochrome00 text-monochrome90">
-      <div className="container px-[190px] pt-[48px] pb-[64px] flex items-start justify-between gap-[84px] ">
+      <div className="container px-[190px] pt-[48px] pb-[64px] flex items-start justify-between gap-[84px]">
         <Image
           src="/contact.png"
           width={276}
           height={670}
           alt="contact-placeholder"
-          className="py-[35px]"
+          className="py-[35px] scroll-in scroll-d1"
         />
-        <div className=" flex flex-col items-start justify-center gap-8 ">
+        <div className=" flex flex-col items-start justify-center gap-8 scroll-in scroll-d2">
           <h2 className=" font-medium text-[60px] leading-[75.6px]">
             Say <span className=" text-matcha60">Hello</span>!
           </h2>

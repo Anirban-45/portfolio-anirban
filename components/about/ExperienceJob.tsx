@@ -64,7 +64,7 @@ const ExperienceJob = () => {
       {jobExp.map((job, index) => (
         <div
           key={index}
-          className="w-full flex items-start justify-between gap-12 pb-8 border-b border-b-monochrome30"
+          className="w-full flex items-start justify-between gap-12 pb-8 border-b border-b-monochrome30 scroll-in"
         >
           <div className="max-w-[520px] flex flex-col items-start gap-3 font-semibold text-[32px] leading-[40.32px]">
             <h3>{job.name}</h3>

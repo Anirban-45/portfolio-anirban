@@ -8,6 +8,7 @@ import CustomCursor from "@/components/ui/customCursor";
 import localFont from "next/font/local";
 import DeviceOverlay from '@/components/ui/deviceOverlay'
 import PageLoader from "@/components/PageLoader";
+import ScrollReveal from "@/components/ScrollReveal";
 
 // NOTE: not exported — Next only allows a fixed set of exports from a layout.
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -36,6 +37,7 @@ export default function RootLayout({
 			>
 				<DeviceOverlay />
         <PageLoader />
+        <ScrollReveal />
         <LenisScroll>
           <NavBar />
           <div id="lenis-root">{children}</div>

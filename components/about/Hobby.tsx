@@ -29,13 +29,13 @@ const Hobby = () => {
     <section className="w-full bg-[#F3F0E7] text-monochrome90 ">
       <div className="container px-[120px] pt-[101px] pb-[113px] flex flex-col gap-12">
         {/* Text */}
-        <div className=" flex flex-col gap-6 items-start justify-center relative">
+        <div className=" flex flex-col gap-6 items-start justify-center relative scroll-in scrol">
           <h4 className=" text-[#383838] font-semibold text-[32px] leading-[40.32px]">
             In my spare time
           </h4>
           <p className="max-w-[700px] text-black font-normal text-base leading-[22px]">
-            I enjoy history, art, epistemology, and hopefully more travelling. I have a close-knit 
-            group of friends with whom I spend a lot of time. Playing the ukulele and violin helps 
+            I enjoy history, art, epistemology, and hopefully more travelling. I have a close-knit
+            group of friends with whom I spend a lot of time. Playing the ukulele and violin helps
             me relax when I'm stressed. The city lights and architecture never fail to fascinate me.
           </p>
           <Image
@@ -47,7 +47,7 @@ const Hobby = () => {
           />
         </div>
         {/* Images */}
-        <div className="flex items-center justify-center gap-6 z-[5]">
+        <div className="flex items-center justify-center gap-6 z-[5] scroll-in">
           {hobbyImages.map((hobby) => (
             <Image
               key={hobby.id}

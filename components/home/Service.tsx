@@ -29,11 +29,11 @@ const Service = () => {
   return (
     <section className="container px-[120px] flex flex-col gap-10 items-start justify-center">
       {/* Section Title */}
-      <h2 className=" font-medium text-4xl leading-[45.3px] text-monochrome90">
+      <h2 className=" font-medium text-4xl leading-[45.3px] text-monochrome90 scroll-in scroll-d1">
         3 ways I can help you
       </h2>
       {/* Service Container */}
-      <div className="flex items-center justify-between gap-6">
+      <div className="flex items-center justify-between gap-6 scroll-in scroll-d2">
         {services.map((service) => (
           <div
             key={service.title}

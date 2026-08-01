@@ -137,14 +137,18 @@ const dribbbleShots2: DribbbleItem[] = [
 const WorkShotScroller  = () => {
   return (
     <section className="pb-16 pt-6 space-y-6">
-      <h2 className="text-center text-[48px] font-semibold text-matcha20">
+      <h2 className="text-center text-[48px] font-semibold text-matcha20 scroll-in">
         My Other Works
       </h2>
-      <p className="pb-2 text-center text-[20px] font-regular text-monochrome20">
+      <p className="pb-2 text-center text-[20px] font-regular text-monochrome20 scroll-in">
         Check out some of my other projects and concepts on Dribbble!
-      </p>
-      <MarqueeRow items={dribbbleShots} direction="left" />
-      <MarqueeRow items={dribbbleShots2} direction="right" />
+			</p>
+			<div className="scroll-in scroll-in-right">
+				<MarqueeRow items={dribbbleShots} direction="left" />
+			</div>
+			<div className="scroll-in scroll-in-left">
+				<MarqueeRow items={dribbbleShots2} direction="right" />
+			</div>
     </section>
   );
 };

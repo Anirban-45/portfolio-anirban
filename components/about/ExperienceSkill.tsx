@@ -33,7 +33,7 @@ const tech = [
 
 const ExperienceSkill = () => {
   return (
-    <div className=" flex flex-col items-start justify-center gap-6 text-monochrome90">
+    <div className=" flex flex-col items-start justify-center gap-6 text-monochrome90 scroll-in">
       <h3 className=" font-semibold text-[32px] leading-[40.32px]">Skills</h3>
       <div className=" flex flex-col items-start justify-center gap-3">
         <h4 className=" font-semibold text-[24px] leading-[30.24px]">Design</h4>

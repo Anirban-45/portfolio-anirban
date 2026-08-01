@@ -226,6 +226,126 @@ html.app-ready .hero-in {
     opacity: 1;
     animation: none;
   }
+}
+
+/* --- Scroll-in utility ------------------------------------------------- */
+/*
+  Add `scroll-in` to ANY element and it eases up into place the first time it
+  is scrolled into view. Same motion curve as `.hero-in`.
+
+      <p className="scroll-in">…</p>
+
+  Stagger siblings with the delay helpers:
+
+      <h2 className="scroll-in">…</h2>
+      <p  className="scroll-in scroll-d1">…</p>
+      <a  className="scroll-in scroll-d2">…</a>
+
+  Modifiers (use instead of the default rise):
+      scroll-in-left / scroll-in-right   slide in horizontally
+      scroll-in-fade                     opacity only, no movement
+      scroll-in-scale                    settle up from slightly small
+      scroll-in-repeat                   replay every time, not just once
+
+  Travel distance is a variable, so a one-off is just:
+      <div className="scroll-in" style={{ "--scroll-in-y": "60px" }}>
+
+  CAUTION: don't put `scroll-in` on an element that already uses Tailwind
+  translate/rotate/scale utilities — both write to `transform` and this
+  animation will overwrite the positioning. Wrap it in a plain div instead.
+*/
+
+html.js-reveal .scroll-in {
+  opacity: 0;
+}
+
+html.js-reveal .scroll-in.is-in {
+  will-change: opacity, transform;
+  animation: scrollIn 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes scrollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--scroll-in-y, 28px), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Modifiers */
+html.js-reveal .scroll-in-left.is-in {
+  animation-name: scrollInLeft;
+}
+html.js-reveal .scroll-in-right.is-in {
+  animation-name: scrollInRight;
+}
+html.js-reveal .scroll-in-fade.is-in {
+  animation-name: scrollInFade;
+}
+html.js-reveal .scroll-in-scale.is-in {
+  animation-name: scrollInScale;
+}
+
+@keyframes scrollInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(calc(-1 * var(--scroll-in-x, 36px)), 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scrollInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--scroll-in-x, 36px), 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scrollInFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollInScale {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Stagger helpers. Named `scroll-d*` so they never collide with Tailwind's
+   own `delay-*`, which sets transition-delay rather than animation-delay. */
+.scroll-d1 { animation-delay: 80ms; }
+.scroll-d2 { animation-delay: 160ms; }
+.scroll-d3 { animation-delay: 240ms; }
+.scroll-d4 { animation-delay: 320ms; }
+.scroll-d5 { animation-delay: 400ms; }
+.scroll-d6 { animation-delay: 480ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .scroll-in,
+  html.js-reveal .scroll-in.is-in {
+    opacity: 1;
+    animation: none;
+  }
 }.animate-swing {
   animation: swing 4s ease-in-out infinite alternate;
   transform-origin: bottom right;

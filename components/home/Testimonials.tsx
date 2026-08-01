@@ -78,7 +78,7 @@ const Testimonials = (): React.JSX.Element => {
         </div>
 
         <div className="flex flex-col gap-12 items-center justify-center px-6 md:px-12 xl:px-[120px] pt-[60px] pb-20">
-          <div className="w-full flex items-center justify-between gap-6">
+          <div className="w-full flex items-center justify-between gap-6 scroll-in scroll-d1">
             <h3 className="self-start font-semibold text-[32px] md:text-[40px] leading-[50.4px]">
               Testimonials
             </h3>
@@ -109,7 +109,7 @@ const Testimonials = (): React.JSX.Element => {
             </div>
           </div>
 
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden scroll-in scroll-d2">
             <div
               className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{

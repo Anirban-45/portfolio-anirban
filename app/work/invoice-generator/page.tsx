@@ -382,8 +382,8 @@ const InvoiceGenWorkPage = () => {
             url="/invoicegen/sticker-sheet.png"
             width={800}
             height={318}
-            alt="sticker-sheet"
-            title="Sticker Sheet"
+            alt="Moddals"
+            title="Different Modals"
           />
           <h5 className=" text-monochrome110 font-semibold text-lg">
             Invoice Templates
@@ -401,7 +401,7 @@ const InvoiceGenWorkPage = () => {
             width={1000}
             height={1672}
             alt="invoice-templates"
-            title="invoice-templates"
+            title="Invoice Template Designs"
           />
         </ProjectPara>
         <Button
