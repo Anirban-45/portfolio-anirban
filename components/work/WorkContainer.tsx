@@ -7,7 +7,7 @@ const workData = [
 	{
     workTitle: "Paphos Museum Web",
     workHead:
-      "A Website and Dashboard For maintaining your invoices and inventories",
+      "A Digitization of evolving Heritage Aspects in Paphos Archaeological Museum",
     clientName: "Cyprus Dept Antiquities",
     workDesc:
       "An interactive digital heritage platform for the Paphos Archaeological Museum that combines immersive virtual exhibitions and historical storytelling with seamless online ticketing and event management.",

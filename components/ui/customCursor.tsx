@@ -1,66 +1,60 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface CustomCursorProps {
-  hoverText: string; // Define hoverText as a string
+  hoverText: string;
 }
 
 const CustomCursor: React.FC<CustomCursorProps> = ({ hoverText }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Update the cursor's position
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = () => {
-      setVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-      setVisible(false);
-    };
-
-    // Check hover state dynamically based on mouse position
-    const handleHoverState = () => {
-      const hoveredElement = document.querySelector("[data-hover]:hover");
-      setIsHovered(!!hoveredElement);
-    };
-
-    // Add event listeners for mouse move and hover states
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseenter", handleMouseEnter);
-    document.addEventListener("mouseleave", handleMouseLeave);
-
-    // Check hover state regularly
-    const intervalId = setInterval(handleHoverState, 50);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseenter", handleMouseEnter);
-      document.removeEventListener("mouseleave", handleMouseLeave);
-      clearInterval(intervalId); // Clean up the interval
-    };
+    return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  const handleOver = useCallback((e: MouseEvent) => {
+    const target = (e.target as HTMLElement)?.closest("[data-hover]");
+    if (target) setIsHovered(true);
+  }, []);
+
+  const handleOut = useCallback((e: MouseEvent) => {
+    const target = (e.target as HTMLElement)?.closest("[data-hover]");
+    if (target) setIsHovered(false);
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mouseover", handleOver);
+    document.addEventListener("mouseout", handleOut);
+    return () => {
+      document.removeEventListener("mouseover", handleOver);
+      document.removeEventListener("mouseout", handleOut);
+    };
+  }, [handleOver, handleOut]);
 
   return (
     <div
-      className={`fixed pointer-events-none z-[1000] transition-opacity duration-200 ease-out transform ${
-        visible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-1"
-      }`}
+      className="fixed pointer-events-none z-[1000]"
       style={{
         top: position.y,
-        left: position.x + 24, // Keeps 1.5rem gap from cursor
+        left: position.x + 24,
       }}
     >
-      {isHovered && (
-        <div className="absolute bg-[#FDFBF7] text-monochrome90 text-base font-medium px-3 py-1 border-[1px] border-[#A4A4A4] border-opacity-30 rounded-md shadow-md transition-all duration-200 ease-out w-[116px] font-plusJakartaSans">
-          {hoverText}
-        </div>
-      )}
+      <div
+        className={`absolute w-[116px] rounded-md border border-[#A4A4A4]/30 bg-[#FDFBF7] px-3 py-1 font-plusJakartaSans text-base font-medium text-monochrome90 shadow-md transition-[opacity,transform] duration-300 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
+          isHovered
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-1"
+        }`}
+        aria-hidden={!isHovered}
+      >
+        {hoverText}
+      </div>
     </div>
   );
 };

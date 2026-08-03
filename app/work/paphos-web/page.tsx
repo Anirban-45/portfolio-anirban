@@ -25,11 +25,7 @@ const pageData = {
   client: "Cyprus Department of Antiquities (Erasmus+ Mobility) ",
   tools: "Figma, Affinity, Perplexity, Miro, Notion.",
 };
-// --- Research data -------------------------------------------------------
-// NOTE ON THE SAMPLE SIZE: the research report states 25 participants, but
-// every reported percentage is an exact fifteenth (53.3% = 8/15,
-// 26.7% = 4/15, 40% = 6/15, 33.3% = 5/15, 73.3% = 11/15, 86.7% = 13/15).
-// One of the two numbers is off. Worth checking the Form before publishing.
+
 const PARTICIPANTS = 25;
 
 const researchGoals = [

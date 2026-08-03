@@ -14,12 +14,33 @@ type Testimonial = {
 };
 
 const testimonials: Testimonial[] = [
-  {
+	// {
+ //    desc: "Anirban combines design sensitivity with implementation awareness. That made discussions with engineering much smoother and helped reduce back-and-forth during delivery.",
+ //    url: "/testimonials/Julia.jpg",
+ //    author: "Julia Schitzer",
+ //    designation: "Unesco Chair in DCH in MENA",
+ //    company: "UNESCO",
+ //  },
+	{
+    desc: "Anirban combines design sensitivity with implementation awareness. That made discussions with engineering much smoother and helped reduce back-and-forth during delivery.",
+    url: "/testimonials/Hatim.jpg",
+    author: "Hatim Lachyab",
+    designation: "QA Engineer",
+    company: "Bolt",
+	},
+	{
     desc: "I am very happy with the work that Anirban Has done in Safewheel. I love the design, and the understanding of technology could be a huge asset for any Startup. He really brings out a great dynamics within any team composition.",
     url: "/testimonials/Pieter_profile1.png",
     author: "Faysal Islam",
     designation: "Co-Founder",
     company: "Safewheel",
+  },
+	{
+    desc: "He has a sharp eye for product detail and can move from user needs to interface decisions very quickly. His Tenure was very effective for our in-house product. Working with him always felt structured, and deligating tasks to him made my life much easier.",
+    url: "/testimonials/Raselvai.jpg",
+    author: "Md. Shahnewaz Rasel",
+    designation: "Director, Business Intel.",
+    company: "Streams Tech",
   },
   {
     desc: "Anirban is a sincere and responsive person when it comes to his responsibilities. I used to work with him during our internships. I was amazed how well he is able to grasp a user story, simply by just looking at the products business model. A 10/10 guy to work with.",
@@ -27,20 +48,6 @@ const testimonials: Testimonial[] = [
     author: "Najish Mahmood",
     designation: "Software Engineer",
     company: "TherapBD",
-  },
-  {
-    desc: "He has a sharp eye for product detail and can move from user needs to interface decisions very quickly. Working with him always felt structured and collaborative.",
-    url: "/testimonials/Pieter_profile1.png",
-    author: "Tanvir Ahmed",
-    designation: "Product Lead",
-    company: "Startup XYZ",
-  },
-  {
-    desc: "Anirban combines design sensitivity with implementation awareness. That made discussions with engineering much smoother and helped reduce back-and-forth during delivery.",
-    url: "/testimonials/Pieter_profile2.png",
-    author: "Sadia Rahman",
-    designation: "Frontend Engineer",
-    company: "Tech Studio",
   },
 ];
 

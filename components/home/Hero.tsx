@@ -39,16 +39,30 @@ const Hero = () => {
               alt="hero-quadrant"
             />
           </div>
-					<h1 className=" relative max-w-[700px] font-[550] text-[48px] leading-[60.48px] hero-in" style={{ animationDelay: "260ms" }}>
-						<button className="absolute border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center gap-3">
-							<Image
-								src="/play-polygon.svg"
-								width={10}
-        				height={18}
-								alt="play-polygon"
-							/>
-							<p className="font-semibold uppercase text-base align-middle">Watch my demo video</p>
+					<h1
+						className="relative max-w-[700px] font-[550] text-[48px] leading-[60.48px] hero-in"
+						style={{ animationDelay: "260ms" }}
+					>
+
+						<button
+							className="group absolute isolate overflow-hidden border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center items-center gap-3 transition-colors duration-300"
+						>
+						  <span
+						    aria-hidden="true"
+						    className="absolute inset-0 -z-10 origin-left scale-x-0 bg-matcha20 transition-transform duration-300 ease-out group-hover:scale-x-100"
+						  />
+						  <Image
+						    src="/play-polygon.svg"
+						    width={10}
+						    height={18}
+						    alt="play-polygon"
+						    className="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
+						  />
+						  <p className="relative z-10 font-semibold uppercase text-base align-middle transition-colors duration-300 ">
+						    Watch my demo video
+						  </p>
 						</button>
+
             <span className=" font-semibold text-[72px] leading-[90.72px] pb-3">
               Hello, I am Anirban. <br />
             </span>

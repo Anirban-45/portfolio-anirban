@@ -37,7 +37,7 @@ const Service = () => {
         {services.map((service) => (
           <div
             key={service.title}
-            className=" p-5 flex flex-col gap-4 items-start justify-center bg-[#F1E5D1]"
+            className=" p-5 flex flex-1 flex-col gap-4 items-start justify-center bg-[#F1E5D1]"
           >
             <div className="flex items-center justify-between gap-3">
               <Image

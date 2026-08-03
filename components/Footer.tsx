@@ -67,7 +67,7 @@ const Footer = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://www.dropbox.com/scl/fi/mo95bg3ecu3g90scei2rf/Resume_Anirban_Tasfin_Azad.pdf?rlkey=i43ihe8n5g6lbjsatm82rszry&st=n8hw4ykj&dl=0"
+                	"https://www.dropbox.com/scl/fi/ddf6opz8hcs16cg569kz0/CV_Anirban_2026.pdf?rlkey=nc2q719oewusyz0b5wk7n9l4o&st=ylqtfr33&dl=0", "_blank", "noopener,noreferrer"
                 )
               }
             >
@@ -76,8 +76,8 @@ const Footer = () => {
           </div>
         </div>
         {/* Horizontal Line */}
-        <div className="w-full ">
-          <hr className="bg-[#6B6B6B] h-[1px]" />
+        <div className="w-full bg-[#6B6B6B]">
+          <hr className="h-[1.5px]" />
         </div>
         {/* Buttons */}
         <div className="flex items-center justify-start gap-10 ">
