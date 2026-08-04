@@ -2,6 +2,7 @@
 import Cover from "@/components/projects/Cover";
 import Figure from "@/components/projects/Figure";
 import Image from "next/image";
+import { PasswordGate } from "@/components/ui/passwordGate";
 import { Button } from "@/components/ui/button";
 import ProjectHeader from "@/components/projects/ProjectHeader";
 import ProjectInfo from "@/components/projects/ProjectInfo";
@@ -108,15 +109,6 @@ const findings = [
   },
 ];
 
-// --- Design system -------------------------------------------------------
-// Swatch hexes were sampled from the pixels of public/paphosweb/colors.png,
-// so these are the real values. Caption errors to fix in that Figma export:
-//   - G50 and G100 are both captioned #edefea. True G100 is #cdd9b3.
-//   - G300's rgb repeats G200's rgb(153, 160, 90). True is (119, 132, 67).
-//   - S500 is captioned rgb(145, 119, 64) but renders rgb(174, 142, 74).
-//   - M00 is captioned rgb(256, 256, 256); channels only go to 255.
-//   - Error / Success / Warning rgb captions are copied from the Stone
-//     column, so Error reads rgb(250, 247, 239), which is actually S50.
 const ramps = [
   {
     family: "Stone",
@@ -295,28 +287,26 @@ const screens = [
   },
 ];
 
-// --- Achievements --------------------------------------------------------
-// TODO: replace with the official event title, date and venue.
-// TODO: both testimonials below are PLACEHOLDERS. Do not publish until the
-// real quotes and attributions are in - invented praise is worse than none.
+
 const testimonials = [
   {
     quote:
-      "PLACEHOLDER - replace with a real quote about the project from someone who saw it presented.",
-    name: "Name Surname",
-    role: "Role, Institution",
+      "I really liked this project. I find the story and its perspective quite unique, and the usage of the 3d models was particularly impressive. It's nice to see you guys actually framing it within the context of the museum. Such a fascinating idea",
+    name: "Christoph Luchs",
+    role: "Professor, Interactive Media, Technische Hochschule Brandenburg",
   },
-  {
-    quote:
-      "PLACEHOLDER - a second real quote, ideally from the museum or department side rather than academia.",
-    name: "Name Surname",
-    role: "Role, Institution",
-  },
+  // {
+  //   quote:
+  //     "PLACEHOLDER - a second real quote, ideally from the museum or department side rather than academia.",
+  //   name: "Name Surname",
+  //   role: "Role, Institution",
+  // },
 ];
 
 const PaphosWebWorkpage = () => {
-  return (
-    <main className="pt-[80px] flex flex-col items-center justify-center ">
+	return (
+		// <PasswordGate password="matcha2026">
+		<main className="pt-[80px] flex flex-col items-center justify-center ">
       <Cover url="/paphosweb/cover.png" alt="paphosweb-cover" />
       <section className="container px-[320px] pt-[80px] pb-[84px] flex flex-col gap-12">
         <ProjectHeader title={pageData.title} shortDesc={pageData.shortDesc} />
@@ -329,52 +319,52 @@ const PaphosWebWorkpage = () => {
         />
         <ProjectPara title="Problem">
           <p>
-						The Museum was renovated back in 2020. However as it’s maintained
-						by the Cyprus Dept. of Antiquities, the museum did not have a
-						separate  website for itself. And as the proposed mobility requirement
-						for this project was digitalization of cultural heritage, our team
-						wanted a platform to create a story around <TypeFormatter>Ancient
-						Cypriot life</TypeFormatter>.
-					</p>
-					<Image
-						src="/paphosweb/museum-batch.png"
-						width={800}
-						height={480}
-						alt="problem"
-						title="Museum"
-					/>
-					<p>
-						This made us understand the necessity of a actually well polished web
-						interface that can host these digital significance. We were also allowed to
-						take photos and 3d scans. And not having a website to properly visualize
-						them was the first hurdle of our team.
+				The Museum was renovated back in 2020. However as it’s maintained
+				by the Cyprus Dept. of Antiquities, the museum did not have a
+				separate  website for itself. And as the proposed mobility requirement
+				for this project was digitalization of cultural heritage, our team
+				wanted a platform to create a story around <TypeFormatter>Ancient
+				Cypriot life</TypeFormatter>.
+			</p>
+			<Image
+				src="/paphosweb/museum-batch.png"
+				width={800}
+				height={480}
+				alt="problem"
+				title="Museum"
+			/>
+			<p>
+				This made us understand the necessity of a actually well polished web
+				interface that can host these digital significance. We were also allowed to
+				take photos and 3d scans. And not having a website to properly visualize
+				them was the first hurdle of our team.
             <br />
           </p>
         </ProjectPara>
         <ProjectPara title="Objective">
           <p>
-						Our objective for this project was to introduce an ancient charachter
-						from Cypruses archaic times to its medieval era. So one single person
-						could move along each timeline to tell its story. We all have seen museums
-						to get an outline of what events took place at that time. But rarely do we
-						think about how people and their lives were, and how it led to the civilizations
-						progress. To do so, we looked into the museum itself which had a very
-						well established architectural design albeit very little digital representation.
-						Which is why we started to make the website as baseline for it's digital
-						presence, to introduce the museum, it's structure, philosophy, and history.
-						Then we focused on access and the three seperate ways people could learn about
-						the museum - through timelines, through the museum itself, and through our story.
+				Our objective for this project was to introduce an ancient charachter
+				from Cypruses archaic times to its medieval era. So one single person
+				could move along each timeline to tell its story. We all have seen museums
+				to get an outline of what events took place at that time. But rarely do we
+				think about how people and their lives were, and how it led to the civilizations
+				progress. To do so, we looked into the museum itself which had a very
+				well established architectural design albeit very little digital representation.
+				Which is why we started to make the website as baseline for it's digital
+				presence, to introduce the museum, it's structure, philosophy, and history.
+				Then we focused on access and the three seperate ways people could learn about
+				the museum - through timelines, through the museum itself, and through our story.
             <br />
           </p>
           <h5 className=" text-monochrome110 font-semibold text-lg">
             Requirements
           </h5>
           <p>
-						In terms of requirement for this project there were several ways
-						we were aloud to think about like, Audio visual elements and
-						augmented reality. However, digitalization of a heritage aspect was
-						expected from us. We were allowed to use a preferable medium and any
-						functional tech stack.
+				In terms of requirement for this project there were several ways
+				we were aloud to think about like, Audio visual elements and
+				augmented reality. However, digitalization of a heritage aspect was
+				expected from us. We were allowed to use a preferable medium and any
+				functional tech stack.
             <br />
           </p>
           <Figure
@@ -395,94 +385,94 @@ const PaphosWebWorkpage = () => {
         <ProjectPara title="Research">
           <p>
           	The research for this project started with looking at what artifacts and sites we had in hand. Our first museum tour was handled by Dr. Zinonos from AUB Medeteranno, who explained each and every artifact with utmost care and compassion for the people who constructed them by hand. He even ended the tour with a short walk to the city center which gave us an understanding of the Cypriot life and beliefs.
-						<br />
+				<br />
           </p>
-					<div className="flex gap-5 mt-4">
-						<Image
+			<div className="flex gap-5 mt-4">
+				<Image
        				src="/paphosweb/field1.png"
            		width={110}
              	height={146}
               alt="slide-head"
               title="field"
             />
-						<Image
+				<Image
        				src="/paphosweb/field2.png"
-		          width={195}
-		          height={146}
-				      alt="slide-head"
-			      	title="field"
-						/>
-						<Image
+          width={195}
+          height={146}
+		      alt="slide-head"
+	      	title="field"
+				/>
+				<Image
        				src="/paphosweb/field3.png"
-		          width={110}
-		          height={146}
-		          alt="slide-head"
-		          title="field"
-						/>
-						<Image
+          width={110}
+          height={146}
+          alt="slide-head"
+          title="field"
+				/>
+				<Image
        				src="/paphosweb/field4.png"
-		          width={110}
-		          height={146}
-		          alt="slide-head"
-		          title="field"
-						/>
-						<Image
+          width={110}
+          height={146}
+          alt="slide-head"
+          title="field"
+				/>
+				<Image
        				src="/paphosweb/field5.png"
-		          width={195}
-		          height={146}
-		          alt="slide-head"
-		          title="field"
-		        />
-					</div>
-					<p>
+          width={195}
+          height={146}
+          alt="slide-head"
+          title="field"
+        />
+			</div>
+			<p>
             <br />
             	Eventually we visited the museum, the Tomb of Kings, the Paphos castle & Even Limassol to get a proper understanding of how to approach our sites design. Following that was a couple of meetings where we decided what our story would portray and where could we visualize it.
-						<br />
-						<br />
-							At the end of this sessions our teams split up in three sections. Design & development, Research & Audit, and finally Story and content management. I being the head of research had a large role to accumulate all the timeline, fact-check the information from academic papers and distribute them to the latter curators. Whereas the content team (Patrick, Qianwen & Robina) started working on the story and taking photos and 3D scans of objects.
-						<br />
-					</p>
-					<div
-						className="flex justify-between mt-2 mb-6 w-full"
-					>
-						<a
-	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	            target="_blank"
-	            rel="noopener noreferrer"
-	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	          >
+				<br />
+				<br />
+					At the end of this sessions our teams split up in three sections. Design & development, Research & Audit, and finally Story and content management. I being the head of research had a large role to accumulate all the timeline, fact-check the information from academic papers and distribute them to the latter curators. Whereas the content team (Patrick, Qianwen & Robina) started working on the story and taking photos and 3D scans of objects.
+				<br />
+			</p>
+			<div
+				className="flex justify-between mt-2 mb-6 w-full"
+			>
+				<a
+           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           target="_blank"
+           rel="noopener noreferrer"
+           className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+         >
               	Timeline research
-						</a>
-						<a
-	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	            target="_blank"
-	            rel="noopener noreferrer"
-	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	          >
-	              Website analysis
-						</a>
-						<a
-	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	            target="_blank"
-	            rel="noopener noreferrer"
-	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	          >
+				</a>
+				<a
+           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           target="_blank"
+           rel="noopener noreferrer"
+           className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+         >
+             Website analysis
+				</a>
+				<a
+           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           target="_blank"
+           rel="noopener noreferrer"
+           className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+         >
               Storyline Design
-						</a>
-						<a
-	            href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
-	            target="_blank"
-	            rel="noopener noreferrer"
-	            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
-	          >
+				</a>
+				<a
+           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           target="_blank"
+           rel="noopener noreferrer"
+           className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
+         >
               Meeting Notes
-						</a>
+				</a>
             </div>
-					<h5 className=" text-monochrome110 font-semibold text-lg">
-						Interrim Presentation
-					</h5>
-					<p>
-						So after our initial ideation and research in Cyprus, We had already started to work on a idea of a prototype that we have suggested to develop during the two month period. In this case Me and Hatim was doing the initial design and pushing it to Gbemi our developer for a quick prototype artifact online. Although the ending of Cyprus week was hectic we did have a slight fun throughout all our adventures.
+			<h5 className=" text-monochrome110 font-semibold text-lg">
+				Interrim Presentation
+			</h5>
+			<p>
+				So after our initial ideation and research in Cyprus, We had already started to work on a idea of a prototype that we have suggested to develop during the two month period. In this case Me and Hatim was doing the initial design and pushing it to Gbemi our developer for a quick prototype artifact online. Although the ending of Cyprus week was hectic we did have a slight fun throughout all our adventures.
           </p>
           <Figure
             url="/paphosweb/slidehead.png"
@@ -690,18 +680,25 @@ const PaphosWebWorkpage = () => {
             delay deadlines and increase resource consumption. This realization
             helped us define the project scope, allowing us to finally conclude
             the research phase and move forward with the development of the app.
-						<br />
+				<br />
           </p>
         </ProjectPara>
         <ProjectPara title="Identity & Branding">
-          <p>
-            The museum had a strong physical identity and almost no digital one.
-            The building itself is restrained - pale stone, deep shade,
-            artefacts lit against neutral walls - so the design system had to
-            come from the place rather than be applied to it. I built the palette
-            out of the materials we had been standing in for a week: limestone
-            and sand, terracotta, olive, and the particular blue of the sea
-            between Paphos and Limassol.
+			<p>
+
+				The museum had a strong physical identity having redesigned and interior
+				changed by <a href="https://www.appios.org/work/pafos-museum">Appios</a>,
+				but almost little to no digital one. The building itself is restrained,
+				pale stone, deep shade, artefacts lit against neutral walls. So the design
+				system had to come from the place rather than be applied to it. The Cypriot
+				featuring colors was also a big influence as me and Hatim looked into how
+				throughout the history Cyproiots have used the colors shape and build up
+				their design philosophy.
+
+				We built the palette out of the environment we saw within the city. The
+				limestone and sand in the ruins and beaches, terracotta and olive from the
+				clay potteries to the arid vegetation in the island, and the particular blue
+				of the mediterranean sea between Paphos and Limassol.
             <br />
             <br />
             That gave four earth ramps plus a neutral set, rather than a single
@@ -859,7 +856,7 @@ const PaphosWebWorkpage = () => {
                     />
                   </div>
                   <h5 className="text-sm font-medium tracking-[2%] self-end">
-                    Fig: {screen.label} &mdash; scroll inside the frame
+                    Fig: {screen.label} - scroll inside the frame
                   </h5>
                 </div>
               </TabsContent>
@@ -904,7 +901,7 @@ const PaphosWebWorkpage = () => {
           className="w-fit px-9 py-3 h-11 rounded-none hover:bg-matcha20 self-center bg-[#CEE9BF] text-monochrome110 font-semibold tracking-[5%] text-base font-plusJakartaSans"
           onClick={() =>
             window.open(
-              "https://www.figma.com/proto/LsNRh2kNE24xKXiSInkFsI/Caregiver-(Copy)?page-id=38%3A34&node-id=98-863&viewport=657%2C658%2C0.33&t=8z8qG4Bl5TbtpCJh-1&scaling=min-zoom&content-scaling=fixed"
+              "https://www.figma.com/proto/HdLE3mtexOhlFn5zlMmeiI/Department-of-Antiquities-%E2%80%94-Cyprus-Rework?node-id=244-104&viewport=-3526%2C375%2C0.25&t=DStAOYGOkFmEW6XO-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
             )
           }
         >
@@ -912,6 +909,7 @@ const PaphosWebWorkpage = () => {
         </Button>
       </section>
     </main>
+    // </PasswordGate>
   );
 };
 

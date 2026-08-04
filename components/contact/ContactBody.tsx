@@ -206,7 +206,7 @@ export default function ContactBody() {
               >
                 Message sent!
               </h3>
-              <p className="text-[16px] leading-[24px] text-monochrome90/75 max-w-[320px] mb-3">
+              <p className="text-[16px] leading-[24px] text-gray-600 max-w-[320px] mb-3">
                 {sentName ? `Thanks, ${sentName}. ` : 'Thank you. '}
                 Your letter is on its way, I’ll get back to you shortly.
               </p>
