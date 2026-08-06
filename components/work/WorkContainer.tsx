@@ -14,6 +14,16 @@ const workData = [
     projectType: "Website/Heritage Platform",
     workImageURL: "/work-paphosweb.jpg",
     href: "/paphos-web",
+	},
+	{
+    workTitle: "Sky Harvest",
+    workHead: "Satellite-Verified survey, Tracking & Financial Aid Management for Farms",
+    clientName: "Streams Tech LTD.",
+    workDesc:
+      "Sky Harvest manages financing for farmers, connecting them to investors that understands their farmlands potential. The lands are surveyed by agents and verified by satellite technology.",
+    projectType: "Website/SAAS",
+    workImageURL: "/work-skyharvest.png",
+    href: "/skyharvest",
   },
   {
     workTitle: "invoicegenerator.biz",
@@ -36,16 +46,6 @@ const workData = [
     projectType: "App/SAAS",
     workImageURL: "/work-songjog.png",
     href: "/songjog",
-  },
-  {
-    workTitle: "Oxfo.com",
-    workHead: "Website For A Dev-shop For All Your Digital Business Ideas",
-    clientName: "Safewheel LTD.",
-    workDesc:
-      "Oxfo is a remotely worked full stack engineering platform who brings real world business and technical ideas into life.",
-    projectType: "Website",
-    workImageURL: "/work-oxfo.png",
-    href: "/oxfo-tech",
   },
   {
     workTitle: "Beditor",
@@ -93,9 +93,9 @@ const WorkContainer = () => {
               href={work.href}
             />
           ))}
-        </div>
-      </div>
+				</div>
         <WorkShotScroller/>
+      </div>
     </section>
   );
 };

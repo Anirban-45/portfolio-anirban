@@ -1,14 +1,16 @@
+"use client";
+
 import { LucideMouse } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
+import { ComingSoonModal } from "../ui/comingSoonModal";
 // import HeroSVG from "./HeroSVG";
 
 const Hero = () => {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
+
   return (
     <section className=" w-full h-[92vh] text-monochrome90 bg-hero-pattern bg-cover bg-center relative">
-      {/* <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0">
-        <HeroSVG />
-      </div> */}
       <div className=" absolute w-full bottom-0 px-[120px] hero-in" style={{ animationDelay: "520ms" }}>
         <div className="container px-[120px] h-28 flex items-center justify-between">
           <p className="text-black font-normal text-base leading-[21.6px]">
@@ -39,29 +41,30 @@ const Hero = () => {
               alt="hero-quadrant"
             />
           </div>
-					<h1
-						className="relative max-w-[700px] font-[550] text-[48px] leading-[60.48px] hero-in"
-						style={{ animationDelay: "260ms" }}
-					>
-
-						<button
-							className="group absolute isolate overflow-hidden border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center items-center gap-3 transition-colors duration-300"
-						>
-						  <span
-						    aria-hidden="true"
-						    className="absolute inset-0 -z-10 origin-left scale-x-0 bg-matcha20 transition-transform duration-300 ease-out group-hover:scale-x-100"
-						  />
-						  <Image
-						    src="/play-polygon.svg"
-						    width={10}
-						    height={18}
-						    alt="play-polygon"
-						    className="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
-						  />
-						  <p className="relative z-10 font-semibold uppercase text-base align-middle transition-colors duration-300 ">
-						    Watch my demo video
-						  </p>
-						</button>
+          <h1
+            className="relative max-w-[700px] font-[550] text-[48px] leading-[60.48px] hero-in"
+            style={{ animationDelay: "260ms" }}
+          >
+            <button
+              type="button"
+              onClick={() => setDemoModalOpen(true)}
+              className="group absolute isolate overflow-hidden border-2 border-black rounded-full py-1.5 px-4 -top-[40%] left-[19.2%] -translate-x-1/2 translate-y-1/2 flex justify-center items-center gap-3 transition-colors duration-300"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 origin-left scale-x-0 bg-matcha20 transition-transform duration-300 ease-out group-hover:scale-x-100"
+              />
+              <Image
+                src="/play-polygon.svg"
+                width={10}
+                height={18}
+                alt="play-polygon"
+                className="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
+              />
+              <p className="relative z-10 font-semibold uppercase text-base align-middle transition-colors duration-300">
+                Watch my demo video
+              </p>
+            </button>
 
             <span className=" font-semibold text-[72px] leading-[90.72px] pb-3">
               Hello, I am Anirban. <br />
@@ -77,11 +80,11 @@ const Hero = () => {
               className="absolute -bottom-[5%] -left-[4%] -translate-x-1/2 translate-y-1/2"
             />
             <Image
-            	src="/hero-whisker-sm.png"
-	            width={36}
-	            height={40.6}
-	            alt="hero-whisker-lg"
-	            className="absolute -top-[54%] left-[42%] -translate-x-1/2 translate-y-1/2"
+              src="/hero-whisker-sm.png"
+              width={36}
+              height={40.6}
+              alt="hero-whisker-lg"
+              className="absolute -top-[54%] left-[42%] -translate-x-1/2 translate-y-1/2"
             />
             <Image
               src="/hero-saturn.png"
@@ -100,6 +103,11 @@ const Hero = () => {
           </h1>
         </div>
       </div>
+
+      <ComingSoonModal
+        open={demoModalOpen}
+        onCloseAction={() => setDemoModalOpen(false)}
+      />
     </section>
   );
 };

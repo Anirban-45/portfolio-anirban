@@ -425,8 +425,8 @@ const PaphosWebWorkpage = () => {
         />
 			</div>
 			<p>
-            <br />
-            	Eventually we visited the museum, the Tomb of Kings, the Paphos castle & Even Limassol to get a proper understanding of how to approach our sites design. Following that was a couple of meetings where we decided what our story would portray and where could we visualize it.
+        <br />
+          Eventually we visited the museum, the Tomb of Kings, the Paphos castle & Even Limassol to get a proper understanding of how to approach our sites design. Following that was a couple of meetings where we decided what our story would portray and where could we visualize it.
 				<br />
 				<br />
 					At the end of this sessions our teams split up in three sections. Design & development, Research & Audit, and finally Story and content management. I being the head of research had a large role to accumulate all the timeline, fact-check the information from academic papers and distribute them to the latter curators. Whereas the content team (Patrick, Qianwen & Robina) started working on the story and taking photos and 3D scans of objects.
@@ -473,26 +473,27 @@ const PaphosWebWorkpage = () => {
 			</h5>
 			<p>
 				So after our initial ideation and research in Cyprus, We had already started to work on a idea of a prototype that we have suggested to develop during the two month period. In this case Me and Hatim was doing the initial design and pushing it to Gbemi our developer for a quick prototype artifact online. Although the ending of Cyprus week was hectic we did have a slight fun throughout all our adventures.
-          </p>
-          <Figure
+      </p>
+      <Figure
             url="/paphosweb/slidehead.png"
             width={800}
             height={448}
             alt="slide-head"
             title="Slides"
-          />
-          <h5 className="text-monochrome110 font-semibold text-lg">
+      />
+      <h5 className="text-monochrome110 font-semibold text-lg">
             User Research
-          </h5>
-          <p>
-            With the timeline verified and the story roughly shaped, I still had
-            no evidence that anyone wanted this. The research set out to
-            understand how people actually behave around museum websites, and
-            what makes a digital cultural experience engaging enough to stay
-            with - focusing on storytelling, interactive exploration, usability
-            and visual engagement.
-            <br />
-          </p>
+      </h5>
+      <p>
+        With the timeline verified and the story roughly shaped, We still had
+				very little evidence that this is the best way to represent our idea.
+				The research set out to
+        understand how people actually behave around museum websites, and
+        what makes a digital cultural experience engaging enough to stay
+        with - focusing on storytelling, interactive exploration, usability
+        and visual engagement.
+        <br />
+      </p>
 
           <div className="grid grid-cols-2 gap-x-10 gap-y-4 py-2">
             <div className="flex flex-col gap-3">
@@ -535,7 +536,7 @@ const PaphosWebWorkpage = () => {
             1. Comparative Analysis
           </h5>
           <p>
-            Before asking users anything, I looked at what the institutions with
+            Before asking users anything, Sahar and Ali looked at what the institutions with
             real budgets had already solved. The British Museum, The
             Metropolitan Museum of Art and the Louvre each answer the same
             problem from a different angle, and each gave us something specific
@@ -576,10 +577,10 @@ const PaphosWebWorkpage = () => {
             ))}
           </div>
           <p>
-            What came out of it shaped the prototype directly - interactive
+            What came out of it gave context to the prototype directly, interactive
             storytelling from The Met, spatial exploration from the Louvre, and
-            a collection structure that could survive the British Museum&apos;s
-            kind of filtering even at our much smaller scale.
+            a collection structure that could survive the British Museum's
+            kind of filtering, even for our case in a much smaller scale.
             <br />
           </p>
 
@@ -589,7 +590,7 @@ const PaphosWebWorkpage = () => {
           <p>
             The survey went out through Google Forms to students and young
             adults with an existing interest in digital experiences and cultural
-            content - the same group we expected to reach first. It asked about
+            content, the same group we expected to reach first. It asked about
             storytelling, interactive exploration, historical content, visual
             engagement, 3D interaction and preferred navigation styles.
             <br />
@@ -637,33 +638,41 @@ const PaphosWebWorkpage = () => {
           </div>
 
           <p>
-            On format specifically the split was narrow but useful: 40% wanted
-            to explore through 3D artefacts and 33.3% through interactive
+						On format specifically the split was narrow but useful. Around 40%
+						wanted to explore through 3D artefacts and 33.3% through interactive
             storytelling, with conventional navigation trailing both. That
-            near-tie is why the final site does not choose between them - the
-            story carries the artefacts instead of sitting beside them.
-            Interactive activities and small games also scored highly for
-            holding attention, which is where the timeline games came from.
+            near-tie is why the final site does not choose between them. The
+						story carries the artefacts instead of sitting beside them. Interactive
+						activities and small games also scored highly for holding attention,
+						which is where the small game-like probes and involving the users
+						interractively took form.
             <br />
           </p>
 
           <div className="flex flex-col gap-3 p-8 bg-[#CEE9BF]">
             <p className="font-medium text-monochrome90 text-[20px] leading-[1.5]">
               The survey closed with {PARTICIPANTS} responses. Small, and drawn
-              from a group already sympathetic to digital culture - so it was
+              from a group already sympathetic to digital culture. So it was
               treated as direction, not proof.
             </p>
             <p className="text-base leading-[1.6] text-monochrome90">
               It was enough to settle the two decisions that mattered: that 3D
               artefacts were worth the scanning effort, and that the
-              museum&apos;s history needed a narrator rather than a catalogue.
+              museum's history needed a narrator rather than a catalogue.
             </p>
           </div>
         </ProjectPara>
         <ProjectPara title="Define">
           <p>
-          We have defined the website in two phases, once before the user research was conducted and one session to polish the ideas that was found after we’ve analyzed the results of the survey.
-            <br />
+						We have defined the website in two phases, once before the user
+						research was conducted and one session to polish the ideas that
+						was found after we've analyzed the results of the survey. While
+						we figure out the Information Architecture and the layout of the
+						website The 3d models we being fixed and polished in blender. The
+						content team even figured out a necessity for voiceovers and started
+						working on that.
+						<br />
+
           </p>
           <Figure
             url="/paphosweb/sitemap.png"
@@ -673,32 +682,28 @@ const PaphosWebWorkpage = () => {
             title="Sitemap"
           />
           <p>
-            Throughout the process, we went through multiple iterations as
-            requirements and client expectations evolved. However, once we
-            settled on a concrete solution and shared a sitemap with all
-            stakeholders, it became clear that further complexity would only
-            delay deadlines and increase resource consumption. This realization
-            helped us define the project scope, allowing us to finally conclude
-            the research phase and move forward with the development of the app.
-				<br />
+	          After the user research, we could finally start the design process. At this time around we were almost finished with fixing the 3d models in blender. So the  <TypeFormatter>graphics designers, Aminata and Robina</TypeFormatter> started working on the assets and design identity. As we had already studied the timeline thoroughly, I could utilize it to format the structure of the website alongside the history of the museum.
+						<br />
+						<br />
+						These processes were happening after we've left Cyprus and <TypeFormatter>as our connector, Ryan went back to the museum </TypeFormatter> once again to provide us some insights that we might have missed in our initial inspections.
           </p>
         </ProjectPara>
         <ProjectPara title="Identity & Branding">
-			<p>
+					<p>
 
-				The museum had a strong physical identity having redesigned and interior
-				changed by <a href="https://www.appios.org/work/pafos-museum">Appios</a>,
-				but almost little to no digital one. The building itself is restrained,
-				pale stone, deep shade, artefacts lit against neutral walls. So the design
-				system had to come from the place rather than be applied to it. The Cypriot
-				featuring colors was also a big influence as me and Hatim looked into how
-				throughout the history Cyproiots have used the colors shape and build up
-				their design philosophy.
+						The museum had a strong physical identity having redesigned and interior
+						changed by <a href="https://www.appios.org/work/pafos-museum">Appios</a>,
+						but almost little to no digital one. The building itself is restrained,
+						pale stone, deep shade, artefacts lit against neutral walls. So the design
+						system had to come from the place rather than be applied to it. The Cypriot
+						featuring colors was also a big influence as me and Hatim looked into how
+						throughout the history Cyproiots have used the colors shape and build up
+						their design philosophy.
 
-				We built the palette out of the environment we saw within the city. The
-				limestone and sand in the ruins and beaches, terracotta and olive from the
-				clay potteries to the arid vegetation in the island, and the particular blue
-				of the mediterranean sea between Paphos and Limassol.
+						We built the palette out of the environment we saw within the city. The
+						limestone and sand in the ruins and beaches, terracotta and olive from the
+						clay potteries to the arid vegetation in the island, and the particular blue
+						of the mediterranean sea between Paphos and Limassol.
             <br />
             <br />
             That gave four earth ramps plus a neutral set, rather than a single
@@ -740,12 +745,11 @@ const PaphosWebWorkpage = () => {
           />
 
           <p>
-            Typography is where the project took its biggest risk. Four families
-            is more than a system this size normally needs, but the site has four
+            Typography is where the project took its biggest risk. Three families
+            is more than a system this size normally needs, but the site has three
             genuinely different jobs to do - announcing the museum, structuring
             long historical writing, carrying a narrated story, and labelling
-            objects - and collapsing those into two voices flattened the story in
-            early drafts.
+            objects.
             <br />
           </p>
 
@@ -780,8 +784,7 @@ const PaphosWebWorkpage = () => {
             below it. Cera Pro takes all body copy at 140% line height, which was
             the single change that made the longer timeline entries readable.
             Display sizes carry minus 2% tracking to stop the large serif setting
-            from feeling loose; the 10px Eczar pre-titles get plus 3% so they stay
-            legible at that size.
+            from feeling loose.
             <br />
           </p>
 
@@ -795,10 +798,8 @@ const PaphosWebWorkpage = () => {
         </ProjectPara>
         <ProjectPara title="Design Prototype">
           <p>
-            Six screens carry the three routes, plus a booking flow. Rather than
-            stack every mockup end to end, the breakdown below is explorable -
-            pick a screen and read what it is doing and why. Each frame scrolls
-            on its own, so a five-thousand-pixel page stays inspectable without
+						Five screens carry the three routes, with a page for history and locatable
+						map, plus a booking flow. Rather than stack every mockup end to end, the breakdown below is explorable - pick a screen and read what it is doing and why. Each frame scrolls on its own, so a five-thousand-pixel page stays inspectable without
             burying the argument.
             <br />
           </p>
