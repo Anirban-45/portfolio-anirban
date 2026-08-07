@@ -63,7 +63,7 @@ const workData = [
     clientName: "Safewheel LTD.",
     workDesc:
       "Safewheel is a healthcare E-commerce platform which cares about more than just products. It broadens to encompass a knowledge ecosystem and community.",
-    projectType: "Website & Mobile App",
+    projectType: "E-commerce Website/App",
     workImageURL: "/work-safewheel.png",
     href: "/safewheel",
   },

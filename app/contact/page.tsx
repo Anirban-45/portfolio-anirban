@@ -1,7 +1,7 @@
 import ContactBody from '@/components/contact/ContactBody'
 import React from 'react'
 
-
+export const metadata = { title: "Contact", description: "..." }
 
 const ContactPage = () => {
   return (

@@ -2,7 +2,7 @@ import WorkContainer from '@/components/work/WorkContainer'
 import WorkHeader from '@/components/work/WorkHeader'
 import React from 'react'
 
-
+export const metadata = { title: "Work", description: "..." }
 
 const WorkPage = () => {
   return (
