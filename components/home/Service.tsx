@@ -1,27 +1,32 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '../ui/button'
 import { LucideArrowRight } from 'lucide-react'
+import { url } from 'node:inspector/promises'
 
 
 const services = [
   {
-    url: '/Lightning.png',
+    iconUrl: '/Lightning.png',
     title: 'Strategy and Brand Research',
     desc: 'Understand the market, define the audience & ideate solutions.',
     buttonText: 'Chat with me',
+    url: 'https://wa.me/8801926214838'
   },
   {
-    url: '/box.png',
+    iconUrl: '/box.png',
     title: 'Product Design',
     desc: 'Lets talk about project ideas and develop a prototype.',
     buttonText: 'Let’s work together',
+    url: 'mailto:anirban.tasfin.azad@gmail.com'
   },
   {
-    url: '/folder-code.png',
+    iconUrl: '/folder-code.png',
     title: 'Development',
     desc: 'Sharing handoffs and insights working in a diverse team.',
-    buttonText: 'Hire me',
+		buttonText: 'Hire me',
+		url: 'https://dribbble.com/qitzuphyn'
   },
 ]
 
@@ -41,7 +46,7 @@ const Service = () => {
           >
             <div className="flex items-center justify-between gap-3">
               <Image
-                src={service.url}
+                src={service.iconUrl}
                 height={24}
                 width={24}
                 alt="service-icon"
@@ -54,8 +59,9 @@ const Service = () => {
               {service.desc}
             </p>
             <div className="flex items-center gap-3 text-monochrome90 group">
-              <Button
-                variant={'link'}
+							<Button
+								variant="link"
+                onClick={() => window.open(service.url)}
                 className=" font-medium text-xl leading-[26px] p-0 text-monochrome110"
               >
                 {service.buttonText}
@@ -63,7 +69,7 @@ const Service = () => {
               <LucideArrowRight
                 width={20}
                 height={20}
-                className=" mt-1 group-hover:translate-x-1 group-hover:animate duration-500 text-monochrome110"
+                className=" mt-1 group-hover:translate-x-1.5 group-hover:animate duration-500 text-monochrome110"
               />
             </div>
           </div>

@@ -1,11 +1,13 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 interface CustomCursorProps {
   hoverText: string;
 }
 
 const CustomCursor: React.FC<CustomCursorProps> = ({ hoverText }) => {
+  const pathname = usePathname();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -36,6 +38,11 @@ const CustomCursor: React.FC<CustomCursorProps> = ({ hoverText }) => {
       document.removeEventListener("mouseout", handleOut);
     };
   }, [handleOver, handleOut]);
+
+  // Reset cursor state on every route change
+  useEffect(() => {
+    setIsHovered(false);
+  }, [pathname]);
 
   return (
     <div

@@ -192,7 +192,7 @@ const screens = [
     label: "Home",
     kicker: "The front door",
     heading: "Three ways in, chosen up front",
-    body: "The homepage refuses to pick a single path. Under the Aphrodite figure and the exhibition dial, the question 'How would you like to explore?' splits into three numbered routes - walk the museum in sequence, dive into a single era, or follow a narrative. That choice is the whole information architecture, made visible in the first screen.",
+    body: "The homepage is our showcase. Under the 3d figurine scroller and the exhibition dial, the question 'How would you like to explore?' splits into three numbered routes - walk the museum in sequence, dive into a single era, or follow a narrative. That choice is the whole information architecture, made visible in the first screen.",
     features: [
       "Guided tour, timeline and narrative offered as equal peers",
       "Membership, museum history and news sit below the fold, not above it",
@@ -389,35 +389,35 @@ const PaphosWebWorkpage = () => {
           </p>
 			<div className="flex gap-5 mt-4">
 				<Image
-       				src="/paphosweb/field1.png"
-           		width={110}
-             	height={146}
-              alt="slide-head"
-              title="field"
-            />
+       		src="/paphosweb/field1.png"
+       		width={110}
+          height={146}
+          alt="slide-head"
+          title="field"
+        />
 				<Image
-       				src="/paphosweb/field2.png"
+       		src="/paphosweb/field2.png"
           width={195}
           height={146}
-		      alt="slide-head"
-	      	title="field"
-				/>
+          alt="slide-head"
+          title="field"
+        />
 				<Image
-       				src="/paphosweb/field3.png"
+       		src="/paphosweb/field3.png"
+          width={110}
+          height={146}
+          alt="slide-head"
+          title="field"
+        />
+				<Image
+       		src="/paphosweb/field4.png"
           width={110}
           height={146}
           alt="slide-head"
           title="field"
 				/>
 				<Image
-       				src="/paphosweb/field4.png"
-          width={110}
-          height={146}
-          alt="slide-head"
-          title="field"
-				/>
-				<Image
-       				src="/paphosweb/field5.png"
+       		src="/paphosweb/field5.png"
           width={195}
           height={146}
           alt="slide-head"
@@ -436,15 +436,15 @@ const PaphosWebWorkpage = () => {
 				className="flex justify-between mt-2 mb-6 w-full"
 			>
 				<a
-           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           href="https://app.notion.com/p/Create-overview-of-the-timeline-3b4d0f9697b980b4af3bc7e812342c4b?source=copy_link"
            target="_blank"
            rel="noopener noreferrer"
            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
          >
-              	Timeline research
+            Timeline research
 				</a>
 				<a
-           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           href="https://app.notion.com/p/Analysis-of-the-current-website-Infos-about-the-Museum-Website-Structure-3b4d0f9697b980cabd8eca165c7cc3d6?source=copy_link"
            target="_blank"
            rel="noopener noreferrer"
            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
@@ -452,7 +452,7 @@ const PaphosWebWorkpage = () => {
              Website analysis
 				</a>
 				<a
-           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           href="https://app.notion.com/p/The-Storyline-3b4d0f9697b980df950dec623cfcc34e?source=copy_link"
            target="_blank"
            rel="noopener noreferrer"
            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
@@ -460,7 +460,7 @@ const PaphosWebWorkpage = () => {
               Storyline Design
 				</a>
 				<a
-           href="https://docs.google.com/spreadsheets/u/0/d/15Ji6sK1GESlHy4mnnVsd0QjdGCQWOA-Rs-SxwjTAuGI/htmlview#"
+           href="https://app.notion.com/p/Meeting-Notes-3b4d0f9697b98048a853dba7f8388d81?source=copy_link"
            target="_blank"
            rel="noopener noreferrer"
            className=" border-b border-b-[#D8790C] text-[#D8790C] font-medium"
@@ -475,11 +475,11 @@ const PaphosWebWorkpage = () => {
 				So after our initial ideation and research in Cyprus, We had already started to work on a idea of a prototype that we have suggested to develop during the two month period. In this case Me and Hatim was doing the initial design and pushing it to Gbemi our developer for a quick prototype artifact online. Although the ending of Cyprus week was hectic we did have a slight fun throughout all our adventures.
       </p>
       <Figure
-            url="/paphosweb/slidehead.png"
-            width={800}
-            height={448}
-            alt="slide-head"
-            title="Slides"
+        url="/paphosweb/slidehead.png"
+        width={800}
+        height={448}
+        alt="slide-head"
+        title="Slides"
       />
       <h5 className="text-monochrome110 font-semibold text-lg">
             User Research
@@ -794,9 +794,27 @@ const PaphosWebWorkpage = () => {
             height={854}
             alt="Pafos Museum type scale across four families"
             title="Typography"
-          />
+					/>
+
+					<p>
+						Alongside the websites fundamental branding we have came up with certain
+						elements that will overall give the UI a cohesive look and feel. For example,
+						to visualize the timelines we chose to align them with pillars that
+						resembles that time periods craftmanships. We chose certain stokes, patterns,
+						geometric shapes and ever the meander lines that is very famous for aegian art.
+						We even incorporated some Cyprus identity based illustrations and icons to
+						add a touch of Cyprus to the UI.
+            <br />
+          </p>
+					<Figure
+						url="/paphosweb/Branding.png"
+						width={800}
+						height={854}
+						alt="Paphos Web branding"
+						title="More Branding elements"
+					/>
         </ProjectPara>
-        <ProjectPara title="Design Prototype">
+        <ProjectPara title="Design Breakdown">
           <p>
 						Five screens carry the three routes, with a page for history and locatable
 						map, plus a booking flow. Rather than stack every mockup end to end, the breakdown below is explorable - pick a screen and read what it is doing and why. Each frame scrolls on its own, so a five-thousand-pixel page stays inspectable without

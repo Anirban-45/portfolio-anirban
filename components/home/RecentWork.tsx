@@ -23,7 +23,7 @@ const works = [
     type: "Website/SaaS",
     year: "2025",
     description:
-      "invoicegenerator.biz is an Exact Match Domain website catering for multiple purpose of invoices including dashboard for management, shelving & analysis..",
+      "invoicegenerator.biz is an Exact Match Domain website catering for multiple purpose of invoices including dashboard for management, shelving & analysis.",
   },
 ];
 
