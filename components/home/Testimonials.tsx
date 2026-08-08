@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
  //    company: "UNESCO",
  //  },
 	{
-    desc: "Anirban combines design sensitivity with implementation awareness. That made discussions with engineering much smoother and helped reduce back-and-forth during delivery.",
+    desc: "Thanks to Anirbans quick design awareness, it was very easy to jump into discussion to visualization. He as an interesting way to guide product decisions. Which helped a lot during our handoff.",
     url: "/testimonials/Hatim.jpg",
     author: "Hatim Lachyab",
     designation: "QA Engineer",
