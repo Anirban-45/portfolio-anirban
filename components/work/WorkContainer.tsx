@@ -1,10 +1,9 @@
 import React from "react";
 import WorkCard from "./WorkCard";
-import WorkShotScroller from "./WorkShotScroller"
-
+import WorkShotScroller from "./WorkShotScroller";
 
 const workData = [
-	{
+  {
     workTitle: "Paphos Museum Web",
     workHead:
       "A Digitization of evolving Heritage Aspects in Paphos Archaeological Museum",
@@ -14,10 +13,11 @@ const workData = [
     projectType: "Website/Heritage Platform",
     workImageURL: "/work-paphosweb.jpg",
     href: "/paphos-web",
-	},
-	{
+  },
+  {
     workTitle: "Sky Harvest",
-    workHead: "Satellite-Verified survey, Tracking & Financial Aid Management for Farms",
+    workHead:
+      "Satellite-Verified survey, Tracking & Financial Aid Management for Farms",
     clientName: "Streams Tech LTD.",
     workDesc:
       "Sky Harvest manages financing for farmers, connecting them to investors that understands their farmlands potential. The lands are surveyed by agents and verified by satellite technology.",
@@ -69,18 +69,18 @@ const workData = [
   },
 ];
 
-
 const WorkContainer = () => {
   return (
-    <section className="w-full bg-monochrome110 text-monochrome00 ">
+    <section className="w-full bg-monochrome110 text-monochrome00">
       <div className="container relative z-10">
-        <div className=" absolute px-[160px] grid grid-cols-7 h-full w-full -z-10">
+        <div className="hidden lg:grid absolute px-[160px] grid-cols-7 h-full w-full -z-10">
           {[...Array(6)].map((_, index) => (
             <div key={index} className="custom-border" />
           ))}
           <div className="custom-border border-r" />
         </div>
-        <div className="p-[120px] flex flex-col items-center justify-center gap-[180px]">
+
+        <div className="p-6 sm:p-10 md:p-16 lg:p-[120px] flex flex-col items-center justify-center gap-16 sm:gap-24 lg:gap-[180px]">
           {workData.map((work) => (
             <WorkCard
               key={work.workTitle}
@@ -93,8 +93,9 @@ const WorkContainer = () => {
               href={work.href}
             />
           ))}
-				</div>
-        <WorkShotScroller/>
+        </div>
+
+        <WorkShotScroller />
       </div>
     </section>
   );

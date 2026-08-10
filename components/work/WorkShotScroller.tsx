@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 type DribbbleItem = {
   id: string;
   href: string;
@@ -20,7 +19,7 @@ const MarqueeRow = ({ items, direction = "left" }: MarqueeRowProps) => {
   return (
     <div className="group overflow-hidden">
       <div
-        className={`flex w-max gap-6 ${animationClass} group-hover:pause-animation`}
+        className={`flex w-max gap-4 sm:gap-6 ${animationClass} group-hover:pause-animation`}
       >
         {[...items, ...items].map((item, idx) => (
           <a
@@ -28,14 +27,14 @@ const MarqueeRow = ({ items, direction = "left" }: MarqueeRowProps) => {
             href={item.href}
             target="_blank"
             rel="noreferrer"
-            className="block rounded-xl p-[6px] overflow-hidden border-2 border-neutral-800 hover:border-[#C1FB88]  transition-colors"
+            className="block rounded-xl p-1 sm:p-[6px] overflow-hidden border-2 border-neutral-800 hover:border-[#C1FB88] transition-colors"
           >
             <Image
               src={item.src}
               alt={item.alt}
               width={320}
               height={280}
-              className="h-[168px] w-60 object-cover rounded"
+              className="h-[120px] w-[180px] sm:h-[150px] sm:w-[214px] lg:h-[168px] lg:w-60 object-cover rounded"
             />
           </a>
         ))}
@@ -134,21 +133,21 @@ const dribbbleShots2: DribbbleItem[] = [
   },
 ];
 
-const WorkShotScroller  = () => {
+const WorkShotScroller = () => {
   return (
-    <section className="pb-16 pt-6 space-y-6">
-      <h2 className="text-center text-[48px] font-semibold text-matcha20 scroll-in">
+    <section className="pb-12 sm:pb-16 pt-6 space-y-4 sm:space-y-6 px-6 sm:px-0">
+      <h2 className="text-center text-3xl sm:text-4xl lg:text-[48px] leading-[1.2] font-semibold text-matcha20 scroll-in">
         My Other Works
       </h2>
-      <p className="pb-2 text-center text-[20px] font-regular text-monochrome20 scroll-in">
+      <p className="pb-2 text-center text-base sm:text-lg lg:text-[20px] leading-[1.4] font-regular text-monochrome20 scroll-in">
         Check out some of my other projects and concepts on Dribbble!
-			</p>
-			<div className="scroll-in scroll-in-right">
-				<MarqueeRow items={dribbbleShots} direction="left" />
-			</div>
-			<div className="scroll-in scroll-in-left">
-				<MarqueeRow items={dribbbleShots2} direction="right" />
-			</div>
+      </p>
+      <div className="scroll-in scroll-in-right">
+        <MarqueeRow items={dribbbleShots} direction="left" />
+      </div>
+      <div className="scroll-in scroll-in-left">
+        <MarqueeRow items={dribbbleShots2} direction="right" />
+      </div>
     </section>
   );
 };

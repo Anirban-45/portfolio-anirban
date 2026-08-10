@@ -29,10 +29,3 @@ const Figure = ({ url, width, height, alt, title }: FigureProps) => {
 };
 
 export default Figure;
-<Figure
-  url="/invoicegen/design-timeline.png"
-  width={800}
-  height={475}
-  alt="design-timeline"
-  title="Design Timeline"
-/>;

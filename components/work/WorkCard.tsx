@@ -12,7 +12,6 @@ type workDataProps = {
   projectType: string;
   workImageURL: string;
   href: string;
-  key: string;
 };
 
 const WorkCard = ({
@@ -23,34 +22,41 @@ const WorkCard = ({
   projectType,
   workImageURL,
   href,
-  key,
 }: workDataProps) => {
   const router = useRouter();
 
   const handleNavigation = (href: string) => {
-    router.push(`work/${href}`); // Navigate to /dashboard
+    router.push(`work/${href}`);
   };
+
   return (
-    <div key={key} className="flex items-start justify-center gap-9 text-white scroll-in">
+    <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-9 text-white scroll-in w-full">
       {/* Left Section */}
-      <div className="flex flex-col items-start justify-center gap-6 flex-[7]">
-        <div className=" flex items-center justify-center gap-6">
-          {/* Work Title */}
-          <div className=" w-[60px] h-[60px] bg-monochrome00 p-4 rounded-2xl">
-            <Image src="/layout.png" height={28} width={28} alt="icon-layout" />
+      <div className="flex flex-col items-start justify-center gap-4 sm:gap-6 flex-[7] w-full">
+        <div className="flex items-center justify-center gap-4 sm:gap-6">
+          <div className="w-12 h-12 sm:w-[60px] sm:h-[60px] bg-monochrome00 p-3 sm:p-4 rounded-2xl shrink-0">
+            <Image
+              src="/layout.png"
+              height={28}
+              width={28}
+              alt="icon-layout"
+              className="w-full h-full"
+            />
           </div>
-          <h4 className=" text-2xl leading-[32.4px] font-medium">
-            <span className=" font-semibold pr-2">Project:</span>
+          <h4 className="text-lg sm:text-xl lg:text-2xl leading-[1.35] lg:leading-[32.4px] font-medium">
+            <span className="font-semibold pr-2">Project:</span>
             {workTitle}
           </h4>
         </div>
+
         {/* Work Head */}
-        <div className=" text-[44px] leading-[59.4px] font-medium text-matcha20 uppercase ">
+        <div className="text-2xl sm:text-3xl lg:text-[44px] leading-[1.25] lg:leading-[59.4px] font-medium text-matcha20 uppercase">
           <span>{workHead}</span>
         </div>
+
         {/* Client Name */}
-        <div className=" flex items-center justify-center gap-6">
-          <div className=" w-[52px] h-[52px] flex items-center justify-center p-3 bg-monochrome90 rounded-[32px]">
+        <div className="flex items-center justify-center gap-4 sm:gap-6">
+          <div className="w-10 h-10 sm:w-[52px] sm:h-[52px] flex items-center justify-center p-2.5 sm:p-3 bg-monochrome90 rounded-[32px] shrink-0">
             <Image
               src="/UsersThree.png"
               width={26.25}
@@ -58,30 +64,35 @@ const WorkCard = ({
               alt="user-icon"
             />
           </div>
-          <h4 className=" text-2xl leading-[32.4px] font-medium">
+          <h4 className="text-lg sm:text-xl lg:text-2xl leading-[1.35] lg:leading-[32.4px] font-medium">
             <span className="font-semibold pr-2">Clients:</span>
             {clientName}
           </h4>
         </div>
+
         {/* Work Description */}
-        <p className=" font-medium text-lg leading-[24.3px]">{workDesc}</p>
+        <p className="font-medium text-base sm:text-lg leading-[1.4] lg:leading-[24.3px]">
+          {workDesc}
+        </p>
       </div>
+
       {/* Right Section */}
-      <div className="flex flex-col items-start justify-center gap-6 flex-[11]">
+      <div className="flex flex-col items-start justify-center gap-4 sm:gap-6 flex-[11] w-full">
         {/* Work Image */}
-        <div className="">
+        <div className="w-full">
           <Image
             src={workImageURL}
             width={720}
             height={540}
-            alt={""}
-            className="rounded-[8px]"
+            alt={workTitle}
+            className="rounded-[8px] w-full h-auto"
           />
         </div>
+
         {/* Work Type */}
-        <div className="flex items-center justify-between w-full">
-          <div className="flex items-center justify-center gap-6">
-            <div className=" w-12 h-12 rounded-full bg-monochrome90 flex items-center justify-center">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 w-full">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-monochrome90 flex items-center justify-center shrink-0">
               <Image
                 src="/FolderSimple.png"
                 width={24}
@@ -89,15 +100,15 @@ const WorkCard = ({
                 alt="folder-icon"
               />
             </div>
-            <h4 className=" text-xl leading-[2px] font-medium">
-              <span className=" font-semibold pr-2">Project Type:</span>
+            <h4 className="text-base sm:text-lg lg:text-xl leading-[1.4] font-medium">
+              <span className="font-semibold pr-2">Project Type:</span>
               {projectType}
             </h4>
           </div>
           <Button
-            variant={'common'}
-            className="h-full rounded-[100px] px-8 py-[14px] font-semibold text-base leading-[20.16px] font-plusJakartaSans"
-            onClick={()=>handleNavigation(href)}
+            variant={"common"}
+            className="w-full sm:w-auto h-auto rounded-[100px] px-6 sm:px-8 py-3 sm:py-[14px] font-semibold text-sm sm:text-base leading-[20.16px] font-plusJakartaSans"
+            onClick={() => handleNavigation(href)}
           >
             View Case Study
           </Button>

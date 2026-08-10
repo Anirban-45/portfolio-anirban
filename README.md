@@ -7,10 +7,10 @@
 - [x] Second font not added
 - [x] Favicon added
 - [x] Hero section add line
-- [ ] Hero section line scale
+- [x] Hero section line scale
 - [x] Invoicegen dashboard state management
 - [x] Retractable Navbar
 - [x] Monochrome/110 background dotted line
 - [x] Navlink pointer/highlight
 - [ ] Responsiveness
-- [ ] animations
+- [x] animations

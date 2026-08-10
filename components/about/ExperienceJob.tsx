@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const jobExp = [
   {
     name: "Streams Tech LTD.",
@@ -57,42 +56,40 @@ const jobExp = [
       "Built a course management platform prototype that made onboarding faster and courses easier to access. Frontend Website development with JavaScript and JSX Element. Rest API integration and Data pipelining on Mongo",
   },
 ];
+
 const ExperienceJob = () => {
   return (
-    <div className="w-full flex flex-col items-start justify-center gap-9 text-monochrome90">
-      {/* Experience Body Card */}
+    <div className="w-full flex flex-col items-start justify-center gap-7 sm:gap-9 text-monochrome90">
       {jobExp.map((job, index) => (
         <div
           key={index}
-          className="w-full flex items-start justify-between gap-12 pb-8 border-b border-b-monochrome30 scroll-in"
+          className="w-full flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-12 pb-6 sm:pb-8 border-b border-b-monochrome30 scroll-in"
         >
-          <div className="max-w-[520px] flex flex-col items-start gap-3 font-semibold text-[32px] leading-[40.32px]">
+          <div className="w-full lg:max-w-[520px] flex flex-col items-start gap-2 sm:gap-3 font-semibold text-2xl sm:text-[32px] leading-[1.25] lg:leading-[40.32px]">
             <h3>{job.name}</h3>
             {job.joinedAs ? (
-              <p className=" text-matcha60 font-medium text-[16px] leading-[21.6px]">
+              <p className="text-matcha60 font-medium text-sm sm:text-[16px] leading-[1.4] lg:leading-[21.6px]">
                 Joined as {job.joinedAs}
               </p>
             ) : (
               ""
             )}
           </div>
-          <div className=" lg:max-w-[680px] w-full flex flex-col items-start justify-center gap-6">
-            <div className=" flex flex-col items-start justify-center gap-2">
-              <h4 className=" font-semibold text-[24px] leading-[30.2px]">
+          <div className="lg:max-w-[680px] w-full flex flex-col items-start justify-center gap-4 sm:gap-6">
+            <div className="flex flex-col items-start justify-center gap-2">
+              <h4 className="font-semibold text-xl sm:text-[24px] leading-[1.3] lg:leading-[30.2px]">
                 {job.currentDesignation}
               </h4>
-              <p className="font-medium text-[16px] leading-[21.6px] text-[#636363]">
+              <p className="font-medium text-sm sm:text-[16px] leading-[1.4] lg:leading-[21.6px] text-[#636363]">
                 {job.startDate} - {job.endDate}
               </p>
             </div>
-            <ul className="list-disc pl-5 font-medium text-[16px] leading-[21.6px] text-[#636363] space-y-2">
+            <ul className="list-disc pl-5 font-medium text-sm sm:text-[16px] leading-[1.4] lg:leading-[21.6px] text-[#636363] space-y-2">
               {job.workedOn
                 .split(". ")
                 .filter(Boolean)
                 .map((item, i) => (
-                  <li key={i}>
-                    {item.endsWith(".") ? item : `${item}.`}
-                  </li>
+                  <li key={i}>{item.endsWith(".") ? item : `${item}.`}</li>
                 ))}
             </ul>
           </div>
