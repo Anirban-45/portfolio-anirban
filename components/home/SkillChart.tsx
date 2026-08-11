@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 const SkillChart = () => {
   return (
-    <section className="container px-6 sm:px-10 md:px-16 lg:px-[120px] pt-6 pb-10 flex flex-col gap-6 sm:gap-8 lg:gap-10 items-start justify-center">
+    <section className="container px-6 sm:px-10 md:px-16 lg:px-[120px] lg:pt-6 lg:pb-10 flex flex-col gap-6 sm:gap-8 lg:gap-10 items-start justify-center">
       <h2 className="font-medium text-2xl sm:text-3xl lg:text-4xl leading-[1.2] lg:leading-[45.3px] text-monochrome90 scroll-in">
         My skill spread around the industry:
       </h2>

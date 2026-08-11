@@ -19,6 +19,7 @@ export default function ContactBody() {
   const [status, setStatus] = useState<SubmitStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
   const [sentName, setSentName] = useState('')
+  const [formKey, setFormKey] = useState(0)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -40,6 +41,7 @@ export default function ContactBody() {
       if (result.success) {
         setStatus('success')
         setForm(EMPTY_FORM)
+        setFormKey((prev) => prev + 1) // forces inputs to remount, clearing internal touched/helper state
       } else {
         setErrorMessage(result.error)
         setStatus('error')
@@ -76,6 +78,7 @@ export default function ContactBody() {
             with you shortly!
           </p>
           <form
+            key={formKey}
             onSubmit={handleSubmit}
             className="w-full flex flex-col gap-6 sm:gap-8 items-start justify-center"
           >

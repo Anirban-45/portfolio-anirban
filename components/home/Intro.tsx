@@ -17,7 +17,7 @@ const data = [
 const Intro = () => {
   return (
     <section className="container px-6 sm:px-10 md:px-16 lg:px-[120px]">
-      <div className="py-8 sm:py-10 lg:py-12 flex flex-col lg:flex-row items-start scroll-in gap-8 sm:gap-12 lg:gap-[100px]">
+      <div className="py-4 sm:py-10 lg:py-12 flex flex-col lg:flex-row items-start scroll-in gap-8 sm:gap-12 lg:gap-[100px]">
         {/* Left Section */}
         <div className="flex flex-col gap-3 max-w-full lg:max-w-[760px] text-monochrome110">
           {/* Start */}
