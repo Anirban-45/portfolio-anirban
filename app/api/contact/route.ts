@@ -3,8 +3,12 @@ import { Resend } from "resend";
 
 export async function POST(req: Request) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
+		const apiKey = process.env.RESEND_API_KEY;
+		console.log("DEBUG — KEY EXISTS:", !!apiKey);
+    console.log("DEBUG — KEY LENGTH:", apiKey?.length);
+    console.log("DEBUG — ALL ENV KEYS:", Object.keys(process.env).filter(k => k.includes("RESEND") || k.includes("CONTACT")));
+
+		if (!apiKey) {
       return NextResponse.json(
         { success: false, error: "Server misconfigured: missing API key." },
         { status: 500 }
