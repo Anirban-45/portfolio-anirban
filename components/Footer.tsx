@@ -66,7 +66,7 @@ const Footer = () => {
             <button
               onClick={() =>
                 window.open(
-                  "https://www.dropbox.com/scl/fi/ddf6opz8hcs16cg569kz0/CV_Anirban_2026.pdf?rlkey=nc2q719oewusyz0b5wk7n9l4o&st=ylqtfr33&dl=0",
+                  "https://www.dropbox.com/scl/fi/z9erj0mm546csnwxaiz7e/CV_Anirban_2026.pdf?rlkey=q1gk98m324reusdcof3jrhuyi&st=e2ju4333&dl=0",
                   "_blank",
                   "noopener,noreferrer"
                 )
